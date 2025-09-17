@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Звіти з лабораторних робіт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__titles">
+        <h1 class="title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+        <h2 class="subtitle">З ДИСЦИПЛІНИ « WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ »</h2>
+      </div>
+
+      <div class="header__meta">
+        <div class="student">
+          <span>Виконавець: Студент групи</span>
+          <span class="underline">IП-34</span>
+          <span>Бураков Станіслав Миколайович</span>
+        </div>
+        <!--
+        <div class="photo">
+          <span>ФОТО</span>
+          <span>студента</span>
+        </div> -->
+      </div>
+
+      <nav class="labs">
+        <button class="tab is-active" data-lab="1">Практична робота №1</button>
+        <button class="tab" data-lab="2">Практична робота №2</button>
+        <button class="tab" data-lab="3">Практична робота №3</button>
+        <button class="tab" data-lab="4">Практична робота №4</button>
+        <button class="tab" data-lab="5">Практична робота №5</button>
+        <button class="tab" data-lab="6">Практична робота №6</button>
+        <button class="tab" data-lab="7">Практична робота №7</button>
+        <button class="tab" data-lab="8">Практична робота №8</button>
+        <button class="tab" data-lab="9">Практична робота №9</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <aside class="sidebar">
+        <button class="pill is-active" data-section="topic">Тема Мета Місце розташування сайту, звіту</button>
+        <button class="pill" data-section="domain">Опис предметного середовища. Опис бізнес-логіки</button>
+        <button class="pill" data-section="structure">Структура документа</button>
+        <button class="pill" data-section="table-html">HTML-код ТАБЛИЦІ</button>
+        <button class="pill" data-section="image-html">HTML-код ЗОБРАЖЕННЯ</button>
+        <button class="pill" data-section="form-html">HTML-код ФОРМИ</button>
+        <button class="pill" data-section="home">Головна сторінка WEB-застосунку</button>
+        <button class="pill" data-section="home-code">Код головної сторінки WEB-застосунку</button>
+        <button class="pill" data-section="conclusion">Висновки</button>
+      </aside>
+
+      <section class="viewer">
+        <h3 class="viewer__title">Місце виведення інформації</h3>
+        <div id="output" class="viewer__body">
+          <p>Оберіть пункт зліва або вкладку зверху, щоб побачити вміст.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+:root{
+  --border:#1e1e1e;
+  --text:#111;
+  --muted:#5c5c5c;
+  --bg:#fff;
+  --accent:#ffe971;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Times New Roman", Times, serif;
+  line-height:1.35;
+}
+
+.page{max-width:1120px;margin:20px auto;padding:0 16px}
+
+.header{display:flex;flex-direction:column;gap:12px}
+.header__titles{text-align:center}
+.title{font-family:inherit;margin:0;font-size:28px;letter-spacing:.4px}
+.subtitle{margin:2px 0 0 0;font-size:28px;font-weight:700;text-transform:uppercase}
+
+.header__meta{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.student{display:flex;gap:8px;align-items:center;font-weight:600}
+.student .underline{border-bottom:2px solid var(--text);padding:0 10px}
+.photo{width:110px;height:80px;border:2px solid var(--border);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700}
+.photo span:last-child{font-weight:600;font-size:12px}
+
+.labs{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.tab{border:2px solid var(--border);border-radius:12px;padding:10px 14px;background:#f7f7f7;cursor:pointer;font-weight:600}
+.tab.is-active{background:var(--accent)}
+.tab:hover{filter:brightness(.96)}
+
+.content{display:grid;grid-template-columns:300px 1fr;gap:16px;margin-top:16px}
+
+.sidebar{display:flex;flex-direction:column;gap:12px}
+.pill{border:2px solid var(--border);border-radius:999px;padding:12px 16px;background:#f7f7f7;text-align:left;cursor:pointer}
+.pill.is-active{background:var(--accent)}
+.pill:hover{filter:brightness(.96)}
+.spacer{height:6px}
+
+.viewer{border:2px solid var(--border);border-radius:6px;min-height:520px;padding:18px 20px;display:flex;flex-direction:column}
+.viewer__title{margin:0 0 8px 0;text-align:center;font-family:inherit}
+.viewer__body{flex:1;border:2px dashed #bbb;border-radius:4px;padding:16px;display:flex;align-items:center;justify-content:center;}
+
+@media (max-width:900px){
+  .content{grid-template-columns:1fr}
+}
+
+
+/* Simple grid for screenshots */
+.screenshots-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.screenshots-grid img{max-width:100%;height:auto;border:1px solid var(--border);border-radius:4px}
+.screenshots-grid figure{margin:0}
+.screenshots-grid figcaption{margin-top:6px;font-size:14px;color:var(--muted)}
+
+
