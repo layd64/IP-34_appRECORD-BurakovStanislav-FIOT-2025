@@ -44,7 +44,7 @@ body{
 
 .viewer{border:2px solid var(--border);border-radius:6px;min-height:520px;padding:18px 20px;display:flex;flex-direction:column}
 .viewer__title{margin:0 0 8px 0;text-align:center;font-family:inherit}
-.viewer__body{flex:1;border:2px dashed #bbb;border-radius:4px;padding:16px;display:flex;align-items:center;justify-content:center;}
+.viewer__body{flex:1;border:2px dashed #bbb;border-radius:4px;padding:16px;display:flex;}
 
 @media (max-width:900px){
   .content{grid-template-columns:1fr}
