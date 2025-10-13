@@ -1,149 +1,79 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const output = document.getElementById('output');
-  const sidebar = document.querySelector('.sidebar');
+export function getPillsForLab(labNumber) {
+  const lab1Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'domain', text: 'Опис предметного середовища. Опис бізнес-логіки' },
+    { section: 'structure', text: 'Структура документа' },
+    { section: 'table-html', text: 'HTML-код ТАБЛИЦІ' },
+    { section: 'image-html', text: 'HTML-код ЗОБРАЖЕННЯ' },
+    { section: 'form-html', text: 'HTML-код ФОРМИ' },
+    { section: 'home', text: 'Головна сторінка WEB-застосунку' },
+    { section: 'home-code', text: 'Код головної сторінки WEB-застосунку' },
+    { section: 'use-case', text: 'Use Case Діаграма' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
 
-  function setActive(list, target){
-    list.forEach(el => el.classList.toggle('is-active', el === target));
-  }
+  const lab2Pills = [
+    { section: 'topic', text: 'Тема, мета ЛР №2. Місце розташування сайту, звіту' },
+    { section: 'styles-connection', text: 'Способи підключення стилів' },
+    { section: 'selectors', text: 'СЕЛЕКТОРИ' },
+    { section: 'tag-selectors', text: 'Селектори тегу' },
+    { section: 'class-selectors', text: 'Селектори класу' },
+    { section: 'id-selectors', text: 'Селектори ідентифікаторів' },
+    { section: 'other-selectors', text: 'Інші селектори' },
+    { section: 'css-advanced', text: 'CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS Просунутий' },
+    { section: 'conclusion', text: 'ВИСНОВКИ' }
+  ];
 
-  function render(title, html){
-    output.innerHTML = '';
-    const wrap = document.createElement('div');
-    const body = document.createElement('div');
-    body.innerHTML = typeof html === 'string' ? html : '';
-    wrap.appendChild(body);
-    output.appendChild(wrap);
-  }
+  const blankPills = [
+    { section: 'section1', text: 'Розділ 1' },
+    { section: 'section2', text: 'Розділ 2' },
+    { section: 'section3', text: 'Розділ 3' },
+    { section: 'section4', text: 'Розділ 4' },
+    { section: 'section5', text: 'Розділ 5' }
+  ];
 
-  // Define pill sets for different labs
-  function getPillsForLab(labNumber) {
-    const lab1Pills = [
-      { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
-      { section: 'domain', text: 'Опис предметного середовища. Опис бізнес-логіки' },
-      { section: 'structure', text: 'Структура документа' },
-      { section: 'table-html', text: 'HTML-код ТАБЛИЦІ' },
-      { section: 'image-html', text: 'HTML-код ЗОБРАЖЕННЯ' },
-      { section: 'form-html', text: 'HTML-код ФОРМИ' },
-      { section: 'home', text: 'Головна сторінка WEB-застосунку' },
-      { section: 'home-code', text: 'Код головної сторінки WEB-застосунку' },
-      { section: 'use-case', text: 'Use Case Діаграма' },
-      { section: 'conclusion', text: 'Висновки' }
-    ];
+  if (labNumber === '1') return lab1Pills;
+  if (labNumber === '2') return lab2Pills;
+  return blankPills;
+}
 
-    const lab2Pills = [
-      { section: 'topic', text: 'Тема, мета ЛР №2. Місце розташування сайту, звіту' },
-      { section: 'styles-connection', text: 'Способи підключення стилів' },
-      { section: 'selectors', text: 'СЕЛЕКТОРИ' },
-      { section: 'tag-selectors', text: 'Селектори тегу' },
-      { section: 'class-selectors', text: 'Селектори класу' },
-      { section: 'id-selectors', text: 'Селектори ідентифікаторів' },
-      { section: 'other-selectors', text: 'Інші селектори' },
-      { section: 'css-advanced', text: 'CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS Просунутий' },
-      { section: 'conclusion', text: 'ВИСНОВКИ' }
-    ];
+export function getSectionTitle(key){
+  const titles = {
+    topic: 'Тема, мета, місце розташування',
+    domain: 'Опис предметного середовища',
+    structure: 'Структура документа',
+    'table-html': 'HTML-код таблиці',
+    'image-html': 'HTML-код зображення',
+    'form-html': 'HTML-код форми',
+    home: 'Головна сторінка WEB-застосунку',
+    'home-code': 'Код головної сторінки WEB-застосунку',
+    conclusion: 'Висновки',
+    'use-case': 'Use Case Діаграма',
+    'styles-connection': 'Способи підключення стилів',
+    selectors: 'СЕЛЕКТОРИ',
+    'tag-selectors': 'Селектори тегу',
+    'class-selectors': 'Селектори класу',
+    'id-selectors': 'Селектори ідентифікаторів',
+    'other-selectors': 'Інші селектори',
+    'css-advanced': 'CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS Просунутий',
+    section1: 'Розділ 1',
+    section2: 'Розділ 2',
+    section3: 'Розділ 3',
+    section4: 'Розділ 4',
+    section5: 'Розділ 5'
+  };
+  return titles[key];
+}
 
-    // For labs 3-9, create blank pills ready for content
-    const blankPills = [
-      { section: 'section1', text: 'Розділ 1' },
-      { section: 'section2', text: 'Розділ 2' },
-      { section: 'section3', text: 'Розділ 3' },
-      { section: 'section4', text: 'Розділ 4' },
-      { section: 'section5', text: 'Розділ 5' }
-    ];
+export function getSectionHtml(key, lab){
+  let html = 'Вміст секції з\'явиться тут.';
 
-    if (labNumber === '1') return lab1Pills;
-    if (labNumber === '2') return lab2Pills;
-    return blankPills;
-  }
-
-  function updateSidebarPills(labNumber) {
-    // Clear existing pills
-    sidebar.innerHTML = '';
-    
-    // Get pills for current lab
-    const pills = getPillsForLab(labNumber);
-    
-    // Create new pills
-    pills.forEach((pill, index) => {
-      const pillElement = document.createElement('button');
-      pillElement.className = 'pill';
-      pillElement.dataset.section = pill.section;
-      pillElement.textContent = pill.text;
-      
-      // Make first pill active
-      if (index === 0) {
-        pillElement.classList.add('is-active');
-      }
-      
-      sidebar.appendChild(pillElement);
-    });
-  }
-
-  const tabs = Array.from(document.querySelectorAll('.tab'));
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      setActive(tabs, tab);
-      const labNumber = tab.dataset.lab;
-      
-      // Update sidebar pills for the selected lab
-      updateSidebarPills(labNumber);
-      
-      // Get the new pills and set up event listeners
-      const newPills = Array.from(document.querySelectorAll('.pill'));
-      setupPillListeners(newPills);
-      
-      // Автоматично відкривати перший пункт
-      const firstPill = newPills[0];
-      if (firstPill) {
-        firstPill.click();
-      }
-    });
-  });
-
-  function getActiveLabNumber(){
-    const activeTab = document.querySelector('.tab.is-active');
-    return activeTab ? activeTab.dataset.lab : undefined;
-  }
-
-  function setupPillListeners(pills) {
-    pills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        setActive(pills, pill);
-        const key = pill.dataset.section || '';
-        const titles = {
-          topic: 'Тема, мета, місце розташування',
-          domain: 'Опис предметного середовища',
-          structure: 'Структура документа',
-          'table-html': 'HTML-код таблиці',
-          'image-html': 'HTML-код зображення',
-          'form-html': 'HTML-код форми',
-          home: 'Головна сторінка WEB-застосунку',
-          'home-code': 'Код головної сторінки WEB-застосунку',
-          conclusion: 'Висновки',
-          'use-case': 'Use Case Діаграма',
-          'styles-connection': 'Способи підключення стилів',
-          selectors: 'СЕЛЕКТОРИ',
-          'tag-selectors': 'Селектори тегу',
-          'class-selectors': 'Селектори класу',
-          'id-selectors': 'Селектори ідентифікаторів',
-          'other-selectors': 'Інші селектори',
-          'css-advanced': 'CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS Просунутий',
-          section1: 'Розділ 1',
-          section2: 'Розділ 2',
-          section3: 'Розділ 3',
-          section4: 'Розділ 4',
-          section5: 'Розділ 5'
-        };
-        const title = titles[key] || pill.textContent.trim();
-
-        const lab = getActiveLabNumber();
-        let html = 'Вміст секції з\'явиться тут.';
-
-      if (key === 'topic' && lab === '1') {
-        html = `
+  // Lab 1
+  if (key === 'topic' && lab === '1') {
+    html = `
           <div>
             <p><strong>Тема практичної:</strong> ТЕГИ ТА АТРИБУТИ HTML-ДОКУМЕНТА. СТРУКТУРНА РОЗМІТКА. GIT.GITHUB. РОБОТА З РЕПОЗИТОРІЯМИ. ОПИС ЛОГІКИ ВЛАСНОГО WEB-ЗАСТОСУНКУ.</p>
-            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи з GitHub, репозиторіями, HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документу для відображення результатів роботи всіх лабораторних робіт.</p>
+            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи з GitHub, репозиторіями, HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документу для відображення результатів роботи всіх практичних робіт.</p>
             <p><strong>Назва проєкту:</strong> BookStore Pro</p>
             <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
             <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів. </p>
@@ -151,17 +81,17 @@ document.addEventListener('DOMContentLoaded', () => {
               <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
               <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
               <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
-              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
               <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
               <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
               <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
             </ul>
           </div>
         `;
-      }
+  }
 
-      if (key === 'domain' && lab === '1') {
-        html = `
+  if (key === 'domain' && lab === '1') {
+    html = `
           <div>
             <h3>Опис предметної області</h3>
             <h4>Платформа книжкового онлайн магазину - BookStore Pro</h4>
@@ -303,10 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
           </div>
         `;
-      }
+  }
 
-      if (key === 'structure' && lab === '1') {
-        html = `
+  if (key === 'structure' && lab === '1') {
+    html = `
           <div>
             <h4>Коренева директорія</h4>
             <ul>
@@ -326,13 +256,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Така структура забезпечує зручну організацію файлів, де HTML-документи знаходяться в корені, а всі зображення зібрані в окремій папці assets для кращої організації та швидкості завантаження.</p>
           </div>
         `;
-      }
+  }
 
-      if (key === 'table-html' && lab === '1') {
-        html = `
+  if (key === 'table-html' && lab === '1') {
+    html = `
           <div>
             <h4>HTML-код таблиці</h4>
-
+            
             <h4>1) Бестселери цього місяця</h4>
             <pre><code>&lt;table&gt;
   &lt;thead&gt;
@@ -415,10 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-      }
+  }
 
-      if (key === 'image-html' && lab === '1') {
-        html = `
+  if (key === 'image-html' && lab === '1') {
+    html = `
           <div>
             <h4>HTML-код зображення</h4>
             <pre><code>&lt;img src="assets/stackOfBooks.png" alt="Modern Library Interior" class="hero-image"&gt;
@@ -434,10 +364,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-      }
+  }
 
-      if (key === 'form-html' && lab === '1') {
-        html = `
+  if (key === 'form-html' && lab === '1') {
+    html = `
           <div>
             <h4>HTML-код форми</h4>
             <pre><code>&lt;form class="newsletter-form" action="#" method="POST"&gt;
@@ -481,10 +411,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-      }
+  }
 
-      if (key === 'home' && lab === '1') {
-        html = `
+  if (key === 'home' && lab === '1') {
+    html = `
           <div>
             <h4>Головна сторінка WEB-застосунку</h4>
             <div class="screenshots-grid">
@@ -499,10 +429,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-      }
+  }
 
-      if (key === 'home-code' && lab === '1') {
-        html = `
+  if (key === 'home-code' && lab === '1') {
+    html = `
           <div>
             <h4>Код головної сторінки WEB-застосунку</h4>
             <pre><code>&lt;!DOCTYPE html&gt;
@@ -745,19 +675,19 @@ document.addEventListener('DOMContentLoaded', () => {
 &lt;/html&gt;</code></pre>
           </div>
         `;
-      }
+  }
 
-      if (key === 'conclusion' && lab === '1') {
-        html = `
+  if (key === 'conclusion' && lab === '1') {
+    html = `
           <div>
             <h4>Висновки</h4>
-            <p>У ході лабораторної роботи створено головну сторінку веб-застосунку BookStore Pro з семантично правильною структурою HTML. Реалізовано навігацію, герої-секцію, блок рекомендованих книг, секцію категорій із таблицею бестселерів, секцію статистики читання з табличними даними, форму підписки на розсилку та інформативний футер. Досягнуто мети роботи: відпрацьовано верстку контенту різних типів (зображення, списки, таблиці, форма), організовано логічну структуру сторінки та підготовлено основу для подальшого стилювання й інтерактивності.</p>
+            <p>У ході практичної роботи створено головну сторінку веб-застосунку BookStore Pro з семантично правильною структурою HTML. Реалізовано навігацію, герої-секцію, блок рекомендованих книг, секцію категорій із таблицею бестселерів, секцію статистики читання з табличними даними, форму підписки на розсилку та інформативний футер. Досягнуто мети роботи: відпрацьовано верстку контенту різних типів (зображення, списки, таблиці, форма), організовано логічну структуру сторінки та підготовлено основу для подальшого стилювання й інтерактивності.</p>
           </div>
         `;
-      }
+  }
 
-      if (key === 'use-case' && lab === '1') {
-        html = `
+  if (key === 'use-case' && lab === '1') {
+    html = `
           <div>
             <p>Нижче представлена Use Case діаграма, яка показує основні взаємодії користувачів з системою.</p>
             <div class="screenshot">
@@ -765,29 +695,32 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-      }
+  }
 
-      // Lab 2 content
-      if (key === 'topic' && lab === '2') {
-        html = `
+  // Lab 2 content
+  if (key === 'topic' && lab === '2') {
+    html = `
           <div>
-            <p><strong>Тема практичної:</strong> КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ. ІДЕНТИФІКАТОРИ. СТИЛІЗАЦІЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ.</p>
-            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи з CSS, селекторами, ідентифікаторами, стилізацією тексту, таблиць, списків та інших елементів HTML-документа.</p>
+            <p><strong>Тема практичної:</strong> КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.</p>
+            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи  з селекторами, ідентифікаторами, списками,  різноманітними властивостями кольору і фону,  зовнішними та внутрішними  відступами,  плаваючими елементами, оформленням текстових елементів.</p>
             <p><strong>Назва проєкту:</strong> BookStore Pro</p>
             <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
-            <p><strong>Мета проєкту:</strong> Створення сучасного та привабливого інтерфейсу для книжкового магазину з використанням CSS стилів.</p>
+            <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів. </p>
             <ul>
               <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
               <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
               <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
-              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
             </ul>
           </div>
         `;
-      }
+  }
 
-      if (key === 'styles-connection' && lab === '2') {
-        html = `
+  if (key === 'styles-connection' && lab === '2') {
+    html = `
           <div>
             <h4>Способи підключення стилів</h4>
             
@@ -814,14 +747,14 @@ document.addEventListener('DOMContentLoaded', () => {
   @import url('styles.css');
 &lt;/style&gt;</code></pre>
             
-            <p><strong>У нашому проєкті використовується зовнішній файл стилів:</strong></p>
+            <p><strong>У моєму проєкті використовується зовнішній файл стилів:</strong></p>
             <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
           </div>
         `;
-      }
+  }
 
-      if (key === 'selectors' && lab === '2') {
-        html = `
+  if (key === 'selectors' && lab === '2') {
+    html = `
           <div>
             <h4>СЕЛЕКТОРИ</h4>
             <p>Селектори CSS - це патерни, які використовуються для вибору елементів HTML, до яких будуть застосовані стилі.</p>
@@ -836,7 +769,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <li><strong>Псевдокласи та псевдоелементи</strong> - для стилізації станів та частин елементів</li>
             </ul>
             
-            <h5>Приклад використання в нашому проєкті:</h5>
+            <h5>Приклад використання в моєму проєкті:</h5>
             <pre><code>/* Селектор тегу */
 body {
   margin: 0;
@@ -856,10 +789,10 @@ body {
 }</code></pre>
           </div>
         `;
-      }
+  }
 
-      if (key === 'tag-selectors' && lab === '2') {
-        html = `
+  if (key === 'tag-selectors' && lab === '2') {
+    html = `
           <div>
             <h4>Селектори тегу</h4>
             <p>Селектори тегу використовуються для стилізації всіх елементів певного типу на сторінці.</p>
@@ -869,48 +802,75 @@ body {
   властивість: значення;
 }</code></pre>
             
-            <h5>Приклади з нашого проєкту:</h5>
+            <h5>Приклади з мого проєкту:</h5>
             <pre><code>/* Стилізація всіх заголовків h1 */
 h1 {
-  font-family: inherit;
-  margin: 0;
-  font-size: 28px;
-  letter-spacing: .4px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Inria Serif', serif;
+}
+
+/* Стилізація всіх заголовків h2 */
+h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+/* Стилізація всіх заголовків h3 */
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
 }
 
 /* Стилізація всіх параграфів */
 p {
-  margin: 0 0 16px 0;
-  line-height: 1.6;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
 }
 
 /* Стилізація всіх посилань */
 a {
-  color: var(--text);
   text-decoration: none;
+  color: #000000;
+  font-weight: normal;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 /* Стилізація всіх кнопок */
 button {
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 14px;
-  background: #f7f7f7;
+  background-color: #F7A823;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }</code></pre>
             
-            <h5>Переваги:</h5>
-            <ul>
-              <li>Простота використання</li>
-              <li>Застосовується до всіх елементів певного типу</li>
-              <li>Ідеально для базових стилів</li>
-            </ul>
+            <h5>HTML використання:</h5>
+            <pre><code>&lt;h1&gt;BookStore Pro&lt;/h1&gt;
+&lt;h2&gt;Рекомендовані книги&lt;/h2&gt;
+&lt;p&gt;Ваш найкращий цифровий досвід читання.&lt;/p&gt;
+&lt;a href="#books"&gt;Книги&lt;/a&gt;
+&lt;button&gt;В КОРЗИНУ&lt;/button&gt;</code></pre>
+            
+            <h5>Зображення результату:</h5>
+            <img src="assets/task2/selectorTag.png" alt="Результат стилізації тегів" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
           </div>
         `;
-      }
+  }
 
-      if (key === 'class-selectors' && lab === '2') {
-        html = `
+  if (key === 'class-selectors' && lab === '2') {
+    html = `
           <div>
             <h4>Селектори класу</h4>
             <p>Селектори класу використовуються для стилізації елементів з певним класом. Класи можуть використовуватися кілька разів на сторінці.</p>
@@ -920,57 +880,88 @@ button {
   властивість: значення;
 }</code></pre>
             
-            <h5>Приклади з нашого проєкту:</h5>
-            <pre><code>/* Стилізація елементів з класом "header" */
-.header {
+            <h5>Приклади з мого проєкту:</h5>
+            <pre><code>/* Стилізація елементів з класом "hero" */
+.hero {
+  padding: 50px 0;
+  background-color: #FFF6E8;
+}
+
+/* Стилізація елементів з класом "book-card" */
+.book-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Стилізація елементів з класом "nav-links" */
+.nav-links {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  list-style: none;
+  gap: 60px;
 }
 
-/* Стилізація елементів з класом "tab" */
-.tab {
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 14px;
-  background: #f7f7f7;
-  cursor: pointer;
-  font-weight: 600;
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: normal;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-/* Стилізація активних вкладок */
-.tab.is-active {
-  background: var(--accent);
+.nav-links a:hover {
+  color: #F7A823;
 }
 
-/* Стилізація елементів з класом "pill" */
-.pill {
-  border: 2px solid var(--border);
-  border-radius: 999px;
-  padding: 12px 16px;
-  background: #f7f7f7;
-  text-align: left;
-  cursor: pointer;
+/* Стилізація елементів з класом "books-grid" */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 5vw, 100px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Стилізація елементів з класом "footer-section" */
+.footer-section h3,
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }</code></pre>
             
             <h5>HTML використання:</h5>
-            <pre><code>&lt;div class="header"&gt;
-  &lt;h1 class="title"&gt;Заголовок&lt;/h1&gt;
-  &lt;button class="tab is-active"&gt;Вкладка&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+            <pre><code>&lt;section class="hero"&gt;
+  &lt;div class="hero-content"&gt;
+    &lt;h2&gt;Welcome!&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class="book-card"&gt;
+  &lt;img src="assets/kobzar.png" alt="Book Cover"&gt;
+  &lt;h3&gt;Кобзар&lt;/h3&gt;
+  &lt;button&gt;В КОРЗИНУ&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;ul class="nav-links"&gt;
+  &lt;li&gt;&lt;a href="#home"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#books"&gt;Книги&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             
-            <h5>Переваги:</h5>
-            <ul>
-              <li>Можна використовувати кілька разів</li>
-              <li>Можна комбінувати кілька класів</li>
-              <li>Гнучкість у стилізації</li>
-            </ul>
+            <h5>Зображення результату:</h5>
+            <img src="assets/task2/selectorClass.png" alt="Результат стилізації класів" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
           </div>
         `;
-      }
+  }
 
-      if (key === 'id-selectors' && lab === '2') {
-        html = `
+  if (key === 'id-selectors' && lab === '2') {
+    html = `
           <div>
             <h4>Селектори ідентифікаторів</h4>
             <p>Селектори ідентифікаторів використовуються для стилізації унікальних елементів на сторінці. ID повинен бути унікальним в межах документа.</p>
@@ -980,432 +971,480 @@ button {
   властивість: значення;
 }</code></pre>
             
-            <h5>Приклади з нашого проєкту:</h5>
-            <pre><code>/* Стилізація елемента з id "output" */
-#output {
-  flex: 1;
-  border: 2px dashed #bbb;
-  border-radius: 4px;
-  padding: 16px;
-  display: flex;
+            <h5>Приклади з мого проєкту:</h5>
+            <pre><code>/* Стилізація поля вводу з id "name" */
+#name {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  background-color: white;
+  color: #000000;
 }
 
-/* Стилізація елемента з id "main-content" */
-#main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+/* Стилізація поля вводу з id "email" */
+#email {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  background-color: white;
+  color: #000000;
+}
+
+/* Стилізація селекту з id "interests" */
+#interests {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  background-color: white;
+  color: #000000;
 }</code></pre>
             
             <h5>HTML використання:</h5>
-            <pre><code>&lt;div id="output" class="viewer__body"&gt;
-  &lt;p&gt;Вміст секції&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;main id="main-content"&gt;
-  &lt;h1&gt;Головний контент&lt;/h1&gt;
-&lt;/main&gt;</code></pre>
+            <pre><code>&lt;input type="text" id="name" name="name" required&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+&lt;select id="interests" name="interests"&gt;
+  &lt;option value="fiction"&gt;Художня література&lt;/option&gt;
+&lt;/select&gt;</code></pre>
             
-            <h5>Особливості:</h5>
-            <ul>
-              <li>ID повинен бути унікальним на сторінці</li>
-              <li>Вища специфічність ніж у класів</li>
-              <li>Використовується для JavaScript навігації</li>
-              <li>Ідеально для унікальних елементів</li>
-            </ul>
-            
-            <h5>Правила використання:</h5>
-            <ul>
-              <li>ID повинен починатися з літери</li>
-              <li>Може містити літери, цифри, дефіси та підкреслення</li>
-              <li>Чувствий до регістру</li>
-            </ul>
+            <h5>Зображення результату:</h5>
+            <img src="assets/task2/selectorID.png" alt="Результат стилізації ідентифікаторів" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
           </div>
         `;
-      }
+  }
 
-      if (key === 'other-selectors' && lab === '2') {
-        html = `
+  if (key === 'other-selectors' && lab === '2') {
+    html = `
           <div>
             <h4>Інші селектори</h4>
+
             
-            <h5>1. Універсальний селектор (*)</h5>
-            <pre><code>/* Вибирає всі елементи */
+            <h5>Приклади з мого проєкту:</h5>
+            <pre><code>/* 1. Універсальний селектор (*) */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}</code></pre>
-            
-            <h5>2. Селектори атрибутів</h5>
-            <pre><code>/* Елементи з певним атрибутом */
-input[type="text"] {
-  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-/* Елементи з певним значенням атрибута */
-a[href="https://example.com"] {
-  color: blue;
+/* 2. Селектори атрибутів */
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
 }
 
-/* Елементи з атрибутом, що містить певне слово */
-img[alt*="book"] {
-  border: 2px solid green;
-}</code></pre>
-            
-            <h5>3. Селектори нащадків та дочірніх елементів</h5>
-            <pre><code>/* Нащадки (всі рівні) */
-.header h1 {
-  color: red;
+.form-group label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
 }
 
-/* Дочірні елементи (тільки перший рівень) */
-.header > h1 {
-  font-size: 24px;
-}</code></pre>
-            
-            <h5>4. Селектори сусідніх елементів</h5>
-            <pre><code>/* Наступний сусідній елемент */
-h1 + p {
-  margin-top: 10px;
+/* 3. Псевдокласи */
+.nav-links a:hover {
+  color: #F7A823;
 }
 
-/* Всі наступні сусідні елементи */
-h1 ~ p {
-  color: gray;
-}</code></pre>
-            
-            <h5>5. Псевдокласи</h5>
-            <pre><code>/* Стан наведення */
-.tab:hover {
-  filter: brightness(.96);
+.hero-content button:hover {
+  background-color: #e6951f;
 }
 
-/* Стан фокуса */
-input:focus {
-  outline: 2px solid blue;
+.book-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Перший та останній елементи */
-li:first-child {
+.newsletter button:hover {
+  background-color: #1d1304;
+}
+
+.footer-section ul li a:hover {
+  opacity: 100%;
+}
+
+/* 4. Псевдоелементи */
+.button-container::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  background-color: #CC7A29;
+  z-index: 1;
+}
+
+.newsletter-container::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: -14px;
+  bottom: -14px;
+  background-color: #CC7A29;
+  z-index: 1;
+}
+
+.categories-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #000000;
   font-weight: bold;
 }
 
-li:last-child {
+.form-group input::placeholder {
+  color: #F7A823;
+}
+
+/* 5. Селектори нащадків */
+.bestsellers-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reading-stats tr:last-child td {
   border-bottom: none;
 }</code></pre>
             
-            <h5>6. Псевдоелементи</h5>
-            <pre><code>/* Перша літера */
-p::first-letter {
-  font-size: 2em;
-  font-weight: bold;
-}
+            <h5>HTML використання:</h5>
+            <pre><code>&lt;!-- Універсальний селектор застосовується до всіх елементів --&gt;
+&lt;div class="button-container"&gt;
+  &lt;button&gt;Кнопка з псевдоелементом&lt;/button&gt;
+&lt;/div&gt;
 
-/* Перший рядок */
-p::first-line {
-  color: blue;
-}
+&lt;!-- Селектори атрибутів --&gt;
+&lt;input type="checkbox" name="notifications" value="yes"&gt;
+&lt;label&gt;Я хочу отримувати сповіщення&lt;/label&gt;
 
-/* До та після елемента */
-.button::before {
-  content: "→ ";
-}
+&lt;!-- Псевдокласи --&gt;
+&lt;ul class="nav-links"&gt;
+  &lt;li&gt;&lt;a href="#home"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-.button::after {
-  content: " ←";
-}</code></pre>
+&lt;!-- Псевдоелементи --&gt;
+&lt;ul class="categories-list"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Художня література&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             
-            <h5>Приклади з нашого проєкту:</h5>
-            <pre><code>/* Універсальний селектор для box-sizing */
-* {
-  box-sizing: border-box;
-}
-
-/* Селектор нащадків */
-.header__titles {
-  text-align: center;
-}
-
-/* Псевдоклас hover */
-.tab:hover {
-  filter: brightness(.96);
-}</code></pre>
+            <h5>Зображення результату:</h5>
+            <img src="assets/task2/selectorOther.png" alt="Результат стилізації інших селекторів" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
           </div>
         `;
-      }
+  }
 
-      if (key === 'css-advanced' && lab === '2') {
-        html = `
+  if (key === 'css-advanced' && lab === '2') {
+    html = `
           <div>
             <h4>CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS Просунутий</h4>
-            
-            <h5>1. Шрифти (Fonts)</h5>
-            <pre><code>/* Встановлення шрифту */
+            <h5>Приклади з мого проєкту:</h5>
+            <pre><code>/* 1. Шрифти (Fonts) */
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #FFF6E8;
+  color: #000000;
+  line-height: 1.6;
 }
 
-/* Розмір шрифту */
-.title {
-  font-size: 28px;
+.logo h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Inria Serif', serif;
 }
 
-/* Вага шрифту */
-.subtitle {
-  font-weight: 700;
+.hero-text h2 {
+  font-size: 128px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Inria Serif', serif;
 }
 
-/* Міжсимвольний інтервал */
-.title {
-  letter-spacing: .4px;
-}
-
-/* Висота рядка */
-body {
-  line-height: 1.35;
-}</code></pre>
-            
-            <h5>2. Текст (Text)</h5>
-            <pre><code>/* Вирівнювання тексту */
-.header__titles {
+/* 2. Текст (Text) */
+.featured-books h2 {
   text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 50px;
 }
 
-/* Трансформація тексту */
-.subtitle {
-  text-transform: uppercase;
-}
-
-/* Декорація тексту */
-a {
+.nav-links a {
   text-decoration: none;
+  color: #000000;
+  font-weight: normal;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-/* Відступи тексту */
-p {
-  margin: 0 0 16px 0;
-}</code></pre>
-            
-            <h5>3. Таблиці (Tables)</h5>
-            <pre><code>/* Стилізація таблиць */
-table {
-  border-collapse: collapse;
+/* 3. Таблиці (Tables) */
+.bestsellers-table table {
   width: 100%;
+  border-collapse: collapse;
+  background-color: white;
 }
 
-th, td {
-  border: 1px solid var(--border);
-  padding: 8px;
-  text-align: left;
+.bestsellers-table th {
+  background-color: #F7A823;
+  color: white;
+  padding: 15px 10px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
-th {
-  background-color: #f2f2f2;
+.bestsellers-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #000000;
+  font-size: 14px;
+}
+
+.reading-stats table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.reading-stats td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #000000;
+  font-size: 16px;
+}
+
+/* 4. Фон (Background) */
+body {
+  background-color: #FFF6E8;
+}
+
+.hero {
+  padding: 50px 0;
+  background-color: #FFF6E8;
+}
+
+.book-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.newsletter-form {
+  padding: 40px 130px;
+  background-color: #F7A823;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  background-color: #382D21;
+  color: white;
+  padding: 60px 0 40px;
+}
+
+/* 5. Контур (Border) */
+.book-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  background-color: white;
+  color: #000000;
+}
+
+/* 6. Списки (Lists) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+}
+
+.categories-list ul {
+  list-style: none;
+}
+
+.categories-list li {
+  padding: 8px 0;
+  color: #000000;
+  font-size: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.categories-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #000000;
   font-weight: bold;
 }
 
-/* Альтернативні рядки */
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}</code></pre>
-            
-            <h5>4. Фон (Background)</h5>
-            <pre><code>/* Колір фону */
-body {
-  background: var(--bg);
-}
-
-/* Фонове зображення */
-.hero {
-  background-image: url('hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Градієнт */
-.gradient-bg {
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-}
-
-/* Повторення фону */
-.pattern-bg {
-  background-image: url('pattern.png');
-  background-repeat: repeat;
-}</code></pre>
-            
-            <h5>5. Контур (Border)</h5>
-            <pre><code>/* Основний контур */
-.tab {
-  border: 2px solid var(--border);
-}
-
-/* Округлені кути */
-.tab {
-  border-radius: 12px;
-}
-
-/* Різні стилі контуру */
-.dashed-border {
-  border: 2px dashed #bbb;
-}
-
-.dotted-border {
-  border: 1px dotted #ccc;
-}
-
-/* Контур з одного боку */
-.bottom-border {
-  border-bottom: 2px solid var(--text);
-}</code></pre>
-            
-            <h5>6. Списки (Lists)</h5>
-            <pre><code>/* Стилізація маркерів списку */
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-ol {
-  list-style-type: decimal;
-  padding-left: 20px;
-}
-
-/* Власні маркери */
-.custom-list {
-  list-style-image: url('custom-bullet.png');
-}
-
-/* Приховати маркери */
-.no-bullets {
+.footer-section ul {
   list-style: none;
-  padding-left: 0;
 }
 
-/* Стилізація елементів списку */
-li {
+.footer-section ul li {
   margin-bottom: 8px;
-  line-height: 1.5;
-}</code></pre>
-            
-            <h5>7. CSS Просунутий</h5>
-            <pre><code>/* CSS змінні (Custom Properties) */
-:root {
-  --border: #1e1e1e;
-  --text: #111;
-  --bg: #fff;
-  --accent: #ffe971;
 }
 
+/* 7. CSS Просунутий */
 /* Flexbox */
-.header {
+.nav-links {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  list-style: none;
+  gap: 60px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Grid */
-.content {
+.books-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 5vw, 100px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Медіа-запити */
-@media (max-width: 900px) {
-  .content {
+.categories-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Анімації та переходи */
+.nav-links a {
+  transition: color 0.3s ease;
+}
+
+.book-card {
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.hero-content button {
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button {
+  transition: background-color 0.3s ease;
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 1200px) {
+  .books-grid {
+    gap: 60px;
+  }
+  .categories-content {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-text h2 {
+    font-size: 72px;
+  }
+  .categories-content {
     grid-template-columns: 1fr;
   }
 }
 
-/* Анімації */
-.tab {
-  transition: all 0.3s ease;
-}
-
-.tab:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }</code></pre>
             
-            <h5>Приклади з нашого проєкту:</h5>
-            <pre><code>/* Використання CSS змінних */
-:root {
-  --border: #1e1e1e;
-  --text: #111;
-  --muted: #5c5c5c;
-  --bg: #fff;
-  --accent: #ffe971;
-}
+            <h5>HTML використання:</h5>
+            <pre><code>&lt;!-- Шрифти та текст --&gt;
+&lt;h1&gt;BookStore Pro&lt;/h1&gt;
+&lt;h2&gt;Рекомендовані книги&lt;/h2&gt;
+&lt;p&gt;Ваш найкращий цифровий досвід читання.&lt;/p&gt;
 
-/* Flexbox для header */
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+&lt;!-- Таблиці --&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;РЕЙТИНГ&lt;/th&gt;
+      &lt;th&gt;НАЗВА&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Код майбутнього&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-/* Grid для контенту */
-.content {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 16px;
-}
+&lt;!-- Списки --&gt;
+&lt;ul class="nav-links"&gt;
+  &lt;li&gt;&lt;a href="#home"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#books"&gt;Книги&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-/* Адаптивний дизайн */
-@media (max-width: 900px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
-}</code></pre>
+&lt;!-- Фон та контур --&gt;
+&lt;div class="book-card"&gt;
+  &lt;img src="assets/kobzar.png" alt="Book Cover"&gt;
+  &lt;h3&gt;Кобзар&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+            
+            <h5>Зображення результату:</h5>
+            <img src="assets/task2/lastSection.png" alt="Результат стилізації CSS властивостей" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
           </div>
         `;
-      }
+  }
 
-      if (key === 'conclusion' && lab === '2') {
-        html = `
+  if (key === 'conclusion' && lab === '2') {
+    html = `
           <div>
             <h4>ВИСНОВКИ</h4>
-            <p>У ході лабораторної роботи №2 було вивчено та практично застосовано основні концепції CSS:</p>
-            
-            <h5>Досягнуті результати:</h5>
-            <ul>
-              <li><strong>Способи підключення стилів:</strong> Вивчено різні методи підключення CSS - внутрішні, вбудовані, зовнішні стилі та імпорт. У проєкті використовується зовнішній файл стилів для кращої організації коду.</li>
-              
-              <li><strong>Селектори:</strong> Освоєно різні типи селекторів - тегів, класів, ідентифікаторів, атрибутів, псевдокласів та псевдоелементів. Кожен тип селектора має своє призначення та специфічність.</li>
-              
-              <li><strong>Стилізація елементів:</strong> Практично застосовано стилізацію шрифтів, тексту, таблиць, фону, контурів та списків. Використано сучасні CSS технології як Flexbox та Grid для створення адаптивного макету.</li>
-              
-              <li><strong>CSS змінні:</strong> Використано CSS Custom Properties для централізованого управління кольорами та іншими значеннями, що спрощує підтримку та модифікацію стилів.</li>
-              
-              <li><strong>Адаптивний дизайн:</strong> Реалізовано медіа-запити для забезпечення коректного відображення на різних пристроях.</li>
-            </ul>
-            
-            <h5>Практичні навички:</h5>
-            <ul>
-              <li>Створення структурованого CSS коду з логічним групуванням стилів</li>
-              <li>Використання семантичних назв класів та ідентифікаторів</li>
-              <li>Застосування сучасних CSS технологій для створення сучасного інтерфейсу</li>
-              <li>Організація стилів для легкого читання та підтримки</li>
-            </ul>
-            
-            <p>Лабораторна робота дозволила закріпити теоретичні знання про CSS та отримати практичний досвід створення стилізованих веб-сторінок. Створений інтерфейс для звітного документу демонструє ефективне використання CSS для створення професійного та зручного користувацького інтерфейсу.</p>
+            <p>У ході практичної роботи було вивчено способи підключення стилів - внутрішні, вбудовані, зовнішні та імпортовані, при цьому для кращої організації коду застосовано зовнішній CSS-файл. Освоєно різні типи селекторів, включно з тегами, класами, ідентифікаторами, атрибутами, псевдокласами та псевдоелементами, а також принципи їхньої специфічності. Реалізовано стилізацію шрифтів, тексту, таблиць, фону, контурів і списків. У проєкті застосовано медіа-запити для забезпечення коректного відображення сторінки на різних пристроях. Під час виконання роботи сформовано навички створення структурованого CSS-коду, використання семантичних назв класів та ефективної організації стилів. Лаботорна робота дозволила закріпити теоретичні знання та отримати практичний досвід створення сучасного, адаптивного та професійно стилізованого інтерфейсу.</p>
           </div>
         `;
-      }
-
-        render(title, html);
-      });
-    });
   }
 
-  const initialPills = Array.from(document.querySelectorAll('.pill'));
-  setupPillListeners(initialPills);
-
-  const activePill = document.querySelector('.pill.is-active');
-  if (activePill) {
-    activePill.click();
-  }
-});
+  return html;
+}
 
 
