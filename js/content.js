@@ -24,6 +24,18 @@ export function getPillsForLab(labNumber) {
     { section: 'conclusion', text: 'ВИСНОВКИ' }
   ];
 
+  // Практична робота №3
+  const lab3Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'task1-layout', text: 'ЗАВДАННЯ №1. Зовнішній вигляд макету. Код макету' },
+    { section: 'task2', text: 'ЗАВДАННЯ №2' },
+    { section: 'fixed-table', text: 'Фіксована таблична верстка' },
+    { section: 'fluid-table', text: 'Гумова таблична верстка' },
+    { section: 'fixed-block', text: 'Фіксована блокова верстка' },
+    { section: 'fluid-block', text: 'Гумова блокова верстка' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
+
   const blankPills = [
     { section: 'section1', text: 'Розділ 1' },
     { section: 'section2', text: 'Розділ 2' },
@@ -34,6 +46,7 @@ export function getPillsForLab(labNumber) {
 
   if (labNumber === '1') return lab1Pills;
   if (labNumber === '2') return lab2Pills;
+  if (labNumber === '3') return lab3Pills;
   return blankPills;
 }
 
@@ -56,6 +69,17 @@ export function getSectionTitle(key){
     'id-selectors': 'Селектори ідентифікаторів',
     'other-selectors': 'Інші селектори',
     'css-advanced': 'CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS Просунутий',
+    // Lab 3 titles
+    'task1-layout': 'ЗАВДАННЯ №1. Зовнішній вигляд макету. Код макету',
+    'task2': 'ЗАВДАННЯ №2',
+    'fixed-table': 'Фіксована таблична верстка',
+    'fluid-table': 'Гумова таблична верстка',
+    'fixed-block': 'Фіксована блокова верстка',
+    'fluid-block': 'Гумова блокова верстка',
+    'task3-flexbox': 'ЗАВДАННЯ №3 FLEXBOX',
+    'page-look': 'Зовнішний вигляд сторінки',
+    'html-code': 'HTML-код',
+    'css-code': 'CSS-код сторінки',
     section1: 'Розділ 1',
     section2: 'Розділ 2',
     section3: 'Розділ 3',
@@ -1440,6 +1464,148 @@ footer {
           <div>
             <h4>ВИСНОВКИ</h4>
             <p>У ході практичної роботи було вивчено способи підключення стилів - внутрішні, вбудовані, зовнішні та імпортовані, при цьому для кращої організації коду застосовано зовнішній CSS-файл. Освоєно різні типи селекторів, включно з тегами, класами, ідентифікаторами, атрибутами, псевдокласами та псевдоелементами, а також принципи їхньої специфічності. Реалізовано стилізацію шрифтів, тексту, таблиць, фону, контурів і списків. У проєкті застосовано медіа-запити для забезпечення коректного відображення сторінки на різних пристроях. Під час виконання роботи сформовано навички створення структурованого CSS-коду, використання семантичних назв класів та ефективної організації стилів. Лаботорна робота дозволила закріпити теоретичні знання та отримати практичний досвід створення сучасного, адаптивного та професійно стилізованого інтерфейсу.</p>
+          </div>
+        `;
+  }
+
+  // Lab 3 content
+  if (key === 'topic' && lab === '3') {
+    html = `
+          <div>
+            <p><strong>Тема практичної:</strong> ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА.  ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX. АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT</p>
+            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи  верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з'ясувати переваги та недоліки типів макетів веб-сторінок; придбати практичні навички роботи  верстки сторінок засобами CSS та FLEXBOX</p>
+            <p><strong>Назва проєкту:</strong> BookStore Pro</p>
+            <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
+            <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів. </p>
+            <ul>
+              <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+            </ul>
+          </div>
+        `;
+  }
+
+  if (key === 'task1-layout' && lab === '3') {
+    html = `
+          <div>
+            <h4>ЗАВДАННЯ №1. Зовнішній вигляд макету. Код макету</h4>
+            <p>У цьому завданні було поліпшено мій власний сайту BookStore Pro з використанням сучасних методів верстки. Макет включає адаптивний дизайн для різних пристроїв та реалізує всі необхідні функціонально-стилістичні вимоги.</p>
+            
+            <h5>Посилання:</h5>
+            <ul>
+              <li><strong>Посилання на репозиторій з кодом власного веб-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на макет у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+            </ul>
+
+            <h5>Зовнішній вигляд сайту:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task3/screenshots/1.png" alt="Скріншот десктопної версії" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <figcaption>Десктопна версія</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/task3/screenshots/2.png" alt="Скріншот мобільної версії" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <figcaption>Мобільна версія</figcaption>
+              </figure>
+            </div>
+            
+            <h5>Макет у Figma:</h5>
+            <div class="screenshot">
+              <img src="assets/task3/bookstorepro.png" alt="Макет BookStore Pro у Figma" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+          </div>
+        `;
+  }
+
+  if (key === 'task2' && lab === '3') {
+    html = `
+          <div>
+            <h4>ЗАВДАННЯ №2</h4>    
+            <h4>Таблична верстка:</h4>
+            <p>Метод створення макету веб-сторінки за допомогою HTML-таблиць. <strong>Переваги:</strong> простота створення, надійність у старих браузерах. <strong>Недоліки:</strong> не семантична, складна підтримка, погані можливості адаптивності.</p>
+            
+            <h4>Блокова верстка:</h4>
+            <p>Сучасний метод створення макету за допомогою CSS-блоків та властивостей позиціонування. <strong>Переваги:</strong> семантичність, гнучкість, кращі можливості адаптивності. <strong>Недоліки:</strong> складніша реалізація, потребує знання CSS.</p>
+            
+            <h4>Фіксована верстка:</h4>
+            <p>Має статичні розміри елементів, що забезпечує стабільність, але погіршує адаптивність до різних розмірів екранів.</p>
+            
+            <h4>Гумова верстка:</h4>
+            <p>Використовує відносні одиниці вимірювання (% , em, rem, vw, vh), що забезпечує кращу адаптивність до різних розмірів екранів та орієнтації пристрою.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'fixed-table' && lab === '3') {
+    html = `
+          <div>
+            <h4>Фіксована таблична верстка</h4>
+            <p>Фіксована таблична верстка використовує статичні розміри для елементів таблиці. Всі розміри задаються в пікселях, що забезпечує стабільний вигляд на різних пристроях.</p>
+            
+            <h5>Варіант 4 - Фіксована таблична верстка:</h5>
+            <div class="screenshot">
+              <img src="assets/task3/screenshots/variant4.png" alt="Варіант 4 - Фіксована таблична верстка" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <h5>Посилання на сторінку:</h5>
+            <p><a href="assets/task3/taskPages/index-table.html" target="_blank" rel="noopener">Переглянути фіксовану табличну верстку</a></p>
+          </div>
+        `;
+  }
+
+  if (key === 'fluid-table' && lab === '3') {
+    html = `
+          <div>
+            <h4>Гумова таблична верстка</h4>
+            <p>Гумова таблична верстка використовує відносні розміри та відсотки для створення адаптивного макету. Таблиця автоматично підлаштовується під розмір вікна браузера.</p>
+            
+            
+            <h5>Посилання на сторінку:</h5>
+            <p><a href="assets/task3/taskPages/index-table-fluid.html" target="_blank" rel="noopener">Переглянути гумову табличну верстку</a></p>
+          </div>
+        `;
+  }
+
+  if (key === 'fixed-block' && lab === '3') {
+    html = `
+          <div>
+            <h4>Фіксована блокова верстка</h4>
+            <p>Фіксована блокова верстка використовує статичні розміри для блоків та елементів. Всі розміри задаються в пікселях, що забезпечує стабільний вигляд.</p>
+            
+            <h5>Варіант 5 - Фіксована блокова верстка:</h5>
+            <div class="screenshot">
+              <img src="assets/task3/screenshots/variant5.png" alt="Варіант 5 - Фіксована блокова верстка" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <h5>Посилання на сторінку:</h5>
+            <p><a href="assets/task3/taskPages/index-blocks.html" target="_blank" rel="noopener">Переглянути фіксовану блокову верстку</a></p>
+          </div>
+        `;
+  }
+
+  if (key === 'fluid-block' && lab === '3') {
+    html = `
+          <div>
+            <h4>Гумова блокова верстка</h4>
+            <p>Гумова блокова верстка використовує відносні розміри та Flexbox для створення адаптивного макету. Блоки автоматично підлаштовуються під розмір вікна браузера.</p>
+            
+            
+            <h5>Посилання на сторінку:</h5>
+            <p><a href="assets/task3/taskPages/index-blocks-fluid.html" target="_blank" rel="noopener">Переглянути гумову блокову верстку</a></p>
+          </div>
+        `;
+  }
+
+  if (key === 'conclusion' && lab === '3') {
+    html = `
+          <div>
+            <h4>Висновки</h4>
+            <p>У ході практичної роботи було вивчено різні методи верстки веб-сторінок: табличну та блокову, фіксовану та гумову. Освоєно принципи створення макетів за допомогою HTML-таблиць та CSS-блоків, вивчено переваги та недоліки кожного підходу. Реалізовано чотири варіанти верстки: фіксовану табличну, гумову табличну, фіксовану блокову та гумову блокову. Порівняно адаптивні можливості різних методів верстки. У проєкті застосовано сучасні CSS-технології, включно з Flexbox та CSS Grid для створення гнучких макетів. Реалізовано адаптивну навігацію з трансформацією у "бургер-меню" на мобільних пристроях, адаптивну сітку контенту з динамічною перебудовою залежно від ширини екрана. Застосовано медіа-запити для адаптації стилів під різні розміри екранів та орієнтацію пристрою, використано відносні одиниці вимірювання (% , em, rem, vw, vh) для забезпечення гнучкості та масштабованості інтерфейсу. Під час виконання роботи сформовано навички створення семантичних компонентів інтерфейсу, реалізації візуальних ефектів та анімацій, а також ефективної організації файлової структури веб-застосунку. Лабораторна робота дозволила закріпити теоретичні знання та отримати практичний досвід створення сучасних, адаптивних макетів веб-сторінок з використанням Flexbox та медіа-запитів.</p>
           </div>
         `;
   }
