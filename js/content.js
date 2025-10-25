@@ -36,6 +36,16 @@ export function getPillsForLab(labNumber) {
     { section: 'conclusion', text: 'Висновки' }
   ];
 
+  // Практична робота №4
+  const lab4Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'desktop', text: 'Десктопна версія' },
+    { section: 'tablet', text: 'Планшетна версія' },
+    { section: 'mobile', text: 'Мобільна версія' },
+    { section: 'logical-operators', text: 'Логічні оператори' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
+
   const blankPills = [
     { section: 'section1', text: 'Розділ 1' },
     { section: 'section2', text: 'Розділ 2' },
@@ -47,6 +57,7 @@ export function getPillsForLab(labNumber) {
   if (labNumber === '1') return lab1Pills;
   if (labNumber === '2') return lab2Pills;
   if (labNumber === '3') return lab3Pills;
+  if (labNumber === '4') return lab4Pills;
   return blankPills;
 }
 
@@ -80,6 +91,11 @@ export function getSectionTitle(key){
     'page-look': 'Зовнішний вигляд сторінки',
     'html-code': 'HTML-код',
     'css-code': 'CSS-код сторінки',
+    // Lab 4 titles
+    desktop: 'Десктопна версія',
+    tablet: 'Планшетна версія',
+    mobile: 'Мобільна версія',
+    'logical-operators': 'Логічні оператори',
     section1: 'Розділ 1',
     section2: 'Розділ 2',
     section3: 'Розділ 3',
@@ -1606,6 +1622,324 @@ footer {
           <div>
             <h4>Висновки</h4>
             <p>У ході практичної роботи було вивчено різні методи верстки веб-сторінок: табличну та блокову, фіксовану та гумову. Освоєно принципи створення макетів за допомогою HTML-таблиць та CSS-блоків, вивчено переваги та недоліки кожного підходу. Реалізовано чотири варіанти верстки: фіксовану табличну, гумову табличну, фіксовану блокову та гумову блокову. Порівняно адаптивні можливості різних методів верстки. У проєкті застосовано сучасні CSS-технології, включно з Flexbox та CSS Grid для створення гнучких макетів. Реалізовано адаптивну навігацію з трансформацією у "бургер-меню" на мобільних пристроях, адаптивну сітку контенту з динамічною перебудовою залежно від ширини екрана. Застосовано медіа-запити для адаптації стилів під різні розміри екранів та орієнтацію пристрою, використано відносні одиниці вимірювання (% , em, rem, vw, vh) для забезпечення гнучкості та масштабованості інтерфейсу. Під час виконання роботи сформовано навички створення семантичних компонентів інтерфейсу, реалізації візуальних ефектів та анімацій, а також ефективної організації файлової структури веб-застосунку. Лабораторна робота дозволила закріпити теоретичні знання та отримати практичний досвід створення сучасних, адаптивних макетів веб-сторінок з використанням Flexbox та медіа-запитів.</p>
+          </div>
+        `;
+  }
+
+  // Lab 4 content
+  if (key === 'topic' && lab === '4') {
+    html = `
+          <div>
+            <p><strong>Тема практичної:</strong> АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT. СТРАТЕГІЯ MOBILE FIRST.</p>
+            <p><strong>Мета практичної:</strong> Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції.Метатег viewport. Інструменти розробника. Стратегія Mobile First.</p>
+            <p><strong>Назва проєкту:</strong> BookStore Pro</p>
+            <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
+            <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів.</p>
+            <ul>
+              <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+            </ul>
+          </div>
+        `;
+  }
+
+  if (key === 'desktop' && lab === '4') {
+    html = `
+          <div>
+            <h4>Десктопна версія</h4>
+            <p>Десктопна версія сайту BookStore Pro оптимізована для екранів з роздільною здатністю від 993px і вище. Використовується повноцінна навігація, великі зображення книг та розширена сітка контенту.</p>
+            
+            <h4>Особливості десктопної версії:</h4>
+            <ul>
+              <li><strong>Повна навігація:</strong> Всі пункти меню відображаються в одному рядку</li>
+              <li><strong>Сітка книг:</strong> 2-3 книги в ряд з повними деталями</li>
+              <li><strong>Великі зображення:</strong> Обкладинки книг відображаються в повному розмірі</li>
+              <li><strong>Розширена сітка:</strong> Максимальна ширина контенту</li>
+            </ul>
+
+          <h4>Додаткова адаптивність для великих екранів:</h4>
+            <p>Для забезпечення більшої респонсивності десктопної версії використовується медіа-запит на 1200 пікселів. Це дозволяє оптимізувати відступи та розміри елементів для екранів, які менші за стандартний десктопний розмір, але все ще більші за планшетні пристрої.</p>
+
+            <h4>Медіа-запити для десктопної версії:</h4>
+            <pre><code>/* Responsive design для десктопної версії */
+@media (max-width: 1200px) {
+    .books-grid {
+        gap: 3.75rem;
+    }
+    .categories-content {
+        gap: 2.5rem;
+    }
+    .reading-stats {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}</code></pre>
+
+
+
+            <h4>Скріншот десктопної версії:</h4>
+            <div class="screenshot">
+              <img src="assets/task4/screenshots/desktop.png" alt="Десктопна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+          </div>
+        `;
+  }
+
+  if (key === 'tablet' && lab === '4') {
+    html = `
+          <div>
+            <h4>Планшетна версія</h4>
+            <p>Планшетна версія сайту BookStore Pro оптимізована для екранів з роздільною здатністю від 768px до 992px.</p>
+            
+            <h5>Особливості планшетної версії:</h5>
+            <ul>
+              <li><strong>Оптимізовані зображення:</strong> Обкладинки книг масштабуються відповідно до розміру екрана</li>
+              <li><strong>Гнучка сітка:</strong> Контент адаптується до ширини екрана</li>
+              <li><strong>Збережена функціональність:</strong> Всі основні функції залишаються доступними</li>
+            </ul>
+
+            <h5>Медіа-запити для планшетної версії:</h5>
+            <pre><code>/* Tablets */
+@media (max-width: 992px) and (orientation: landscape) {
+    nav {
+        padding: 0 1rem;
+    }
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .hero-text h2 {
+        font-size: 4.5rem;
+    }
+    .hero-content {
+        gap: 2rem;
+    }
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        padding: 0 3.125rem;
+    }
+    .book-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+    .categories-content {
+        grid-template-columns: 1fr;
+    }
+    .categories-list {
+        text-align: center;
+    }
+    .categories-list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    .categories-list li {
+        padding-left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .categories-list li::before {
+        position: static;
+        margin-right: 0;
+    }
+    .stats-content {
+        overflow-x: auto;
+    }
+
+    .newsletter-form {
+        padding: 2rem 3rem;
+    }
+}</code></pre>
+
+            <h5>Скріншот планшетної версії:</h5>
+            <div class="screenshot">
+              <img src="assets/task4/screenshots/tablet.png" alt="Планшетна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+          </div>
+        `;
+  }
+
+  if (key === 'mobile' && lab === '4') {
+    html = `
+          <div>
+            <h4>Мобільна версія</h4>
+            <p>Мобільна версія сайту BookStore Pro оптимізована для екранів з роздільною здатністю до 767px. Використовується вертикальна навігація, одна колонка контенту та оптимізовані для дотику елементи.</p>
+            
+            <h5>Особливості мобільної версії:</h5>
+            <ul>
+              <li><strong>Вертикальна навігація:</strong> Меню перетворюється на вертикальний список у бургер-меню</li>
+              <li><strong>Одна колонка:</strong> Всі книги відображаються в одній колонці</li>
+              <li><strong>Оптимізовані кнопки:</strong> Збільшені кнопки для зручності натискання</li>
+              <li><strong>Спрощена сітка:</strong> Мінімальні відступи та компактний дизайн</li>
+            </ul>
+
+            <h5>Медіа-запити для мобільної версії:</h5>
+            <pre><code>/* Phones */
+@media (max-width: 768px) {
+    header {
+        border-bottom: 0.0625rem solid #757575;
+        position: relative;
+    }
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .nav-links {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .hero {
+        padding: 0;
+    }
+    .hero-content {
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2.625rem;
+    }
+    .hero-image {
+        height: 18.75rem;
+    }
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .book-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+    .bestsellers-table {
+        padding: 1.25rem;
+        overflow-x: auto;
+    }
+    .reading-stats td {
+        padding: 0.75rem 0.625rem;
+        font-size: 0.875rem;
+
+    }
+    .newsletter-container{
+        padding: 0 1.25rem;
+    }
+    .newsletter-container::before{
+        top: 0.625rem;
+        left: 1.875rem;
+        right: 0.625rem;
+        bottom: -0.625rem;
+    }
+    .newsletter h2 {
+        font-size: 1.75rem;
+    }
+    .newsletter h3 {
+        font-size: 1rem;
+    }
+    .newsletter-form {
+        padding: 1.5rem;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero-text h3 { font-size: 1rem; }
+    .hero-text p { font-size: 1rem; }
+    .book-price { font-size: 1.25rem; }
+    .book-card h3 { font-size: 1rem; }
+    .button-container::before {
+        top: 0.375rem; left: 0.375rem; right: -0.375rem; bottom: -0.375rem;
+    }
+}</code></pre>
+
+            <h5>Скріншот мобільної версії:</h5>
+            <div class="screenshot">
+              <img src="assets/task4/screenshots/phone.png" alt="Мобільна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+          </div>
+        `;
+  }
+
+  if (key === 'logical-operators' && lab === '4') {
+    html = `
+          <div>
+            <h4>Логічні оператори</h4>
+            <p>У проєкті BookStore Pro використовуються логічні оператори в медіа-запитах для створення складних умов адаптивної верстки. Це дозволяє точно контролювати, коли застосовуються певні стилі.</p>
+            
+            <h5>Логічні оператори:</h5>
+            
+            <h5>1. OR оператор (або) - кома (,)</h5>
+            <p>Найчастіше використовуваний оператор у проєкті. Дозволяє застосовувати стилі, якщо виконана хоча б одна з умов.</p>
+
+            <h5>2. AND оператор (і) - ключове слово and</h5>
+            <p>Використовується для поєднання кількох умов, які повинні виконуватися одночасно.</p>
+
+            <h5>3. NOT оператор (не) - ключове слово not</h5>
+            <p>Використовується для застосування стилів, якщо умова НЕ виконана. Дозволяє виключати певні пристрої або умови.</p>
+ 
+            <h4>Практичні приклади з проєкту BookStore Pro:</h4>
+            
+            <h5>AND оператор для планшетів:</h5>
+            <pre><code>/* Застосовується для планшетів (до 992px) ТА альбомної орієнтації */
+@media (max-width: 992px) and (orientation: landscape) {
+    .hero-text h2 {
+        font-size: 4.5rem;
+    }
+    .hero-content {
+        gap: 2rem;
+    }
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        padding: 0 3.125rem;
+    }
+}</code></pre>
+
+            <h4>Переваги використання логічних операторів:</h4>
+            <ul>
+              <li><strong>OR оператор (,):</strong> Дозволяє застосовувати однакові стилі для різних умов, що спрощує код</li>
+              <li><strong>AND оператор (and):</strong> Забезпечує точний контроль для конкретних комбінацій умов</li>
+              <li><strong>NOT оператор (not):</strong> Дозволяє виключати певні пристрої або умови, створюючи інверсні умови</li>
+              <li><strong>Гнучкість:</strong> Можливість створювати складні умови для різних пристроїв</li>
+              <li><strong>Оптимізація:</strong> Можливість групувати схожі стилі для різних breakpoint</li>
+            </ul>
+        `;
+  }
+
+  if (key === 'conclusion' && lab === '4') {
+    html = `
+          <div>
+            <h4>Висновки</h4>
+            <p>У ході практичної роботи було вивчено принципи адаптивної верстки та створення responsive дизайну для різних пристроїв. Освоєно використання медіа-запитів для адаптації стилів під різні розміри екранів, включно з десктопною, планшетною та мобільною версіями. Вивчено метатег viewport та його роль у забезпеченні коректного відображення на мобільних пристроях. Реалізовано логічні оператори для створення складних умов у медіа-запитах. Реалізовано адаптивну сітку контенту з динамічною перебудовою залежно від ширини екрана, оптимізовано навігацію для різних пристроїв та забезпечено зручність користування на дотикових екранах. Під час виконання роботи сформовано навички створення адаптивних макетів, використання сучасних CSS-технологій для responsive дизайну та оптимізації користувацького досвіду на різних пристроях. Лабораторна робота дозволила закріпити теоретичні знання та отримати практичний досвід створення сучасних, адаптивних веб-інтерфейсів, що коректно працюють на всіх типах пристроїв.</p>
           </div>
         `;
   }
