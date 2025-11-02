@@ -36,13 +36,28 @@ export function getPillsForLab(labNumber) {
     { section: 'conclusion', text: 'Висновки' }
   ];
 
-  // Практична робота №4
+  // Практична робота №3.2
   const lab4Pills = [
     { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
     { section: 'desktop', text: 'Десктопна версія' },
     { section: 'tablet', text: 'Планшетна версія' },
     { section: 'mobile', text: 'Мобільна версія' },
     { section: 'logical-operators', text: 'Логічні оператори' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
+
+  // Практична робота №4
+  const lab5Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'task1', text: 'Завдання 1' },
+    { section: 'task2', text: 'Завдання 2' },
+    { section: 'task3', text: 'Завдання 3' },
+    { section: 'task4', text: 'Завдання 4' },
+    { section: 'task5', text: 'Завдання 5' },
+    { section: 'task6', text: 'Завдання 6' },
+    { section: 'task7', text: 'Завдання 7' },
+    { section: 'task8', text: 'Завдання 8' },
+    { section: 'task9', text: 'Завдання 9' },
     { section: 'conclusion', text: 'Висновки' }
   ];
 
@@ -58,6 +73,7 @@ export function getPillsForLab(labNumber) {
   if (labNumber === '2') return lab2Pills;
   if (labNumber === '3') return lab3Pills;
   if (labNumber === '4') return lab4Pills;
+  if (labNumber === '5') return lab5Pills;
   return blankPills;
 }
 
@@ -96,11 +112,15 @@ export function getSectionTitle(key){
     tablet: 'Планшетна версія',
     mobile: 'Мобільна версія',
     'logical-operators': 'Логічні оператори',
-    section1: 'Розділ 1',
-    section2: 'Розділ 2',
-    section3: 'Розділ 3',
-    section4: 'Розділ 4',
-    section5: 'Розділ 5'
+    task1: 'Завдання 1',
+    task2: 'Завдання 2',
+    task3: 'Завдання 3',
+    task4: 'Завдання 4',
+    task5: 'Завдання 5',
+    task6: 'Завдання 6',
+    task7: 'Завдання 7',
+    task8: 'Завдання 8',
+    task9: 'Завдання 9'
   };
   return titles[key];
 }
@@ -1626,7 +1646,7 @@ footer {
         `;
   }
 
-  // Lab 4 content
+  // Lab 3.2 content
   if (key === 'topic' && lab === '4') {
     html = `
           <div>
@@ -1684,7 +1704,7 @@ footer {
 
             <h4>Скріншот десктопної версії:</h4>
             <div class="screenshot">
-              <img src="assets/task4/screenshots/desktop.png" alt="Десктопна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="assets/task3.2/screenshots/desktop.png" alt="Десктопна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
             </div>
           </div>
         `;
@@ -1766,7 +1786,7 @@ footer {
 
             <h5>Скріншот планшетної версії:</h5>
             <div class="screenshot">
-              <img src="assets/task4/screenshots/tablet.png" alt="Планшетна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="assets/task3.2/screenshots/tablet.png" alt="Планшетна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
             </div>
           </div>
         `;
@@ -1874,7 +1894,7 @@ footer {
 
             <h5>Скріншот мобільної версії:</h5>
             <div class="screenshot">
-              <img src="assets/task4/screenshots/phone.png" alt="Мобільна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="assets/task3.2/screenshots/phone.png" alt="Мобільна версія BookStore Pro" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
             </div>
           </div>
         `;
@@ -1931,6 +1951,731 @@ footer {
           <div>
             <h4>Висновки</h4>
             <p>У ході практичної роботи було вивчено принципи адаптивної верстки та створення responsive дизайну для різних пристроїв. Освоєно використання медіа-запитів для адаптації стилів під різні розміри екранів, включно з десктопною, планшетною та мобільною версіями. Вивчено метатег viewport та його роль у забезпеченні коректного відображення на мобільних пристроях. Реалізовано логічні оператори для створення складних умов у медіа-запитах. Реалізовано адаптивну сітку контенту з динамічною перебудовою залежно від ширини екрана, оптимізовано навігацію для різних пристроїв та забезпечено зручність користування на дотикових екранах. Під час виконання роботи сформовано навички створення адаптивних макетів, використання сучасних CSS-технологій для responsive дизайну та оптимізації користувацького досвіду на різних пристроях. Лабораторна робота дозволила закріпити теоретичні знання та отримати практичний досвід створення сучасних, адаптивних веб-інтерфейсів, що коректно працюють на всіх типах пристроїв.</p>
+          </div>
+        `;
+  }
+
+  // Lab 5 (Практична робота №4) content
+  if (key === 'topic' && lab === '5') {
+    html = `
+          <div>
+            <p><strong>Тема практичної:</strong> ОСНОВИ JAVASCRIPT У HTML-ДОКУМЕНТІ. ШАБЛОНІ РЯДКИ. КЕРУВАННЯ ПОРЯДКОМ ОБЧИСЛЕНЬ. МАСИВИ. МЕТОДИ МАСИВІВ. ФУНКЦІЇ</p>
+            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях.  Реалізація програм засовами мови JAVASCRIPT.</p>
+            <p><strong>Назва проєкту:</strong> BookStore Pro</p>
+            <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
+            <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів.</p>
+            <ul>
+              <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+            </ul>
+          </div>
+        `;
+  }
+
+  if (key === 'task1' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 1</h4>
+            <p>Перевірка числа на позитивність, негативність або нуль. Використання умовних операторів та функції prompt для введення даних.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1
+buttons[0].addEventListener('click', function() {
+    const value = prompt('Введіть число:');
+    
+    if (value === null) {
+        console.log('Введення скасовано');
+        return;
+    }
+    
+    console.log(\`Введене значення: \${value}\`);
+    
+    const numValue = Number(value);
+    
+    if (isNaN(numValue)) {
+        alert('Введено не числове значення');
+    } else if (numValue < 0) {
+        alert('Число від\'ємне');
+    } else if (numValue > 0) {
+        alert('Число додатнє');
+    } else {
+        alert('Число дорівнює нулю');
+    }
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task1.1.png" alt="Скріншот завдання 1.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task1.2.png" alt="Скріншот завдання 1.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task1.3.png" alt="Скріншот завдання 1.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма запитує у користувача число через prompt, перевіряє його тип за допомогою Number() та isNaN(), а потім виводить повідомлення про те, чи є число додатнім, від'ємним або дорівнює нулю.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task2' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 2</h4>
+            <p>Визначення пори року за номером місяця. Використання оператора switch для багатозначних умов.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 2
+buttons[1].addEventListener('click', function() {
+    const number = prompt('Введіть число від 1 до 4:');
+    let result;
+    
+    switch(number) {
+        case '1':
+            result = 'зима';
+            break;
+        case '2':
+            result = 'весна';
+            break;
+        case '3':
+            result = 'літо';
+            break;
+        case '4':
+            result = 'осінь';
+            break;
+        default:
+            result = 'невідомий місяць';
+    }
+    
+    console.log(\`Результат: \${result}\`);
+    alert(\`Результат: \${result}\`);
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task2.1.png" alt="Скріншот завдання 2.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task2.2.png" alt="Скріншот завдання 2.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма використовує оператор switch для визначення пори року за номером місяця (1-зима, 2-весна, 3-літо, 4-осінь). У разі введення невалідного значення повертається "невідомий місяць".</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task3' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 3</h4>
+            <p>Система авторизації з перевіркою логіну та пароля. Використання вкладених умовних операторів.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 3
+buttons[2].addEventListener('click', function() {
+    const adminLogin = 'Admin';
+    const adminPassword = 'admin123';
+    const userLogin = 'User';
+    const userPassword = 'user123';
+    
+    const login = prompt('Введіть логін:');
+    
+    console.log(\`Введений логін: \${login}\`);
+    
+    if (login === null || login === '') {
+        alert('Cancelled');
+        return;
+    }
+    
+    const trimmedLogin = login.trim();
+    
+    if (trimmedLogin === 'Admin') {
+        const password = prompt('Введіть пароль:');
+        if (password === adminPassword) {
+            alert('Hello, Admin');
+        } else if (password === null || password === '') {
+            alert('Cancelled');
+        } else {
+            alert('I don\'t know you');
+        }
+    } else if (trimmedLogin === 'User') {
+        const password = prompt('Введіть пароль:');
+        if (password === userPassword) {
+            alert('Hello, User');
+        } else if (password === null || password === '') {
+            alert('Cancelled');
+        } else {
+            alert('I don\'t know you');
+        }
+    } else {
+        alert('I don\'t know you');
+    }
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task3.1.png" alt="Скріншот завдання 3.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task3.2.png" alt="Скріншот завдання 3.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task3.3.png" alt="Скріншот завдання 3.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма реалізує систему авторизації з двома типами користувачів: Admin (пароль: admin123) та User (пароль: user123). Використовується метод trim() для очищення введених даних від пробілів, вкладені умовні оператори для перевірки паролів та обробка скасування операції.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task4' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 4</h4>
+            <p>Розрахунок загальної вартості замовлення дроїдів. Використання функцій для інкапсуляції логіки.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 4
+buttons[3].addEventListener('click', function() {
+    function makeTransaction(quantity, pricePerDroid) {
+        const totalPrice = quantity * pricePerDroid;
+        return \`You ordered \${quantity} droids worth \${totalPrice} credits!\`;
+    }
+    
+    const quantityInput = prompt('Введіть кількість дроїдів:');
+    if (quantityInput === null) {
+        alert('Операцію скасовано');
+        return;
+    }
+    
+    const priceInput = prompt('Введіть ціну одного дроїда:');
+    if (priceInput === null) {
+        alert('Операцію скасовано');
+        return;
+    }
+    
+    const quantity = Number(quantityInput);
+    const pricePerDroid = Number(priceInput);
+    
+    if (isNaN(quantity) || isNaN(pricePerDroid)) {
+        alert('Будь ласка, введіть числові значення');
+        return;
+    }
+    
+    const result = makeTransaction(quantity, pricePerDroid);
+    console.log(result);
+    alert(result);
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task4.1.png" alt="Скріншот завдання 4.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task4.2.png" alt="Скріншот завдання 4.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task4.3.png" alt="Скріншот завдання 4.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма використовує функцію makeTransaction для розрахунку загальної вартості замовлення. Функція приймає кількість дроїдів та ціну за один дроїд, обчислює загальну вартість та повертає рядок з інформацією про замовлення. Реалізовано перевірку валідності введених даних.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task5' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 5</h4>
+            <p>Перевірка повідомлення на наявність заборонених слів. Використання методів роботи з рядками.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 5
+buttons[4].addEventListener('click', function() {
+    function checkForSpam(message) {
+        const lowerMessage = message.toLowerCase();
+        return lowerMessage.includes('spam') || lowerMessage.includes('sale');
+    }
+    
+    const message = prompt('Введіть повідомлення для перевірки:');
+    
+    if (message === null) {
+        alert('Операцію скасовано');
+        return;
+    }
+    
+    const hasSpam = checkForSpam(message);
+    const result = hasSpam ? 'Знайдено заборонені слова (spam або sale)' : 'Заборонених слів не знайдено';
+    
+    console.log(\`Повідомлення: "\${message}"\`);
+    console.log(\`Результат перевірки: \${hasSpam}\`);
+    alert(result);
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task5.1.png" alt="Скріншот завдання 5.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task5.2.png" alt="Скріншот завдання 5.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма використовує функцію checkForSpam для перевірки повідомлення на наявність заборонених слів (spam або sale). Використовується метод toLowerCase() для приведення рядка до нижнього регістру та метод includes() для пошуку підрядків. Перевірка відбувається без урахування регістру.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task6' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 6</h4>
+            <p>Фільтрація масиву чисел за значенням. Використання циклів та методів роботи з масивами.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 6
+buttons[5].addEventListener('click', function() {
+    function filterArray(numbers, value) {
+        const filteredArray = [];
+        
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > value) {
+                filteredArray.push(numbers[i]);
+            }
+        }
+        
+        return filteredArray;
+    }
+    
+    const numbersInput = prompt('Введіть числа через кому (наприклад: 1, 2, 3, 4, 5):');
+    if (numbersInput === null) {
+        alert('Операцію скасовано');
+        return;
+    }
+    
+    const valueInput = prompt('Введіть значення для фільтрації:');
+    if (valueInput === null) {
+        alert('Операцію скасовано');
+        return;
+    }
+    
+    const numbersStrings = numbersInput.split(',').map(item => item.trim());
+    const numbers = numbersStrings.map(Number);
+    const value = Number(valueInput);
+    
+    if (numbers.some(isNaN) || isNaN(value)) {
+        alert('Будь ласка, введіть правильні числові значення');
+        return;
+    }
+    
+    const filtered = filterArray(numbers, value);
+    console.log('Початковий масив:', numbers);
+    console.log('Значення для фільтрації:', value);
+    console.log('Відфільтрований масив:', filtered);
+    alert(\`Результат: [\${filtered.join(', ')}]\`);
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task6,1.png" alt="Скріншот завдання 6.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task6.2.png" alt="Скріншот завдання 6.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task6.3.png" alt="Скріншот завдання 6.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма реалізує функцію filterArray, яка фільтрує масив чисел, залишаючи лише ті, які більші за задане значення. Використовується цикл for для ітерації по масиву, метод split() для розбиття рядка на масив, map() для перетворення рядків у числа, та join() для об'єднання результатів.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task7' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 7</h4>
+            <p>Знаходження мінімального та максимального значення для парних та непарних індексів. Сортування масиву методом вибору в порядку спадання.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 7
+buttons[6].addEventListener('click', function() {
+    // Функція для знаходження мін/макс для парних/непарних індексів
+    function findMinMaxForIndices(arr) {
+        const evenValues = [];
+        const oddValues = [];
+        
+        for (let i = 0; i < arr.length; i++) {
+            if (i % 2 === 0) {
+                evenValues.push(arr[i]);
+            } else {
+                oddValues.push(arr[i]);
+            }
+        }
+        
+        const evenMax = evenValues.length > 0 ? Math.max(...evenValues) : null;
+        const evenMin = evenValues.length > 0 ? Math.min(...evenValues) : null;
+        const oddMax = oddValues.length > 0 ? Math.max(...oddValues) : null;
+        const oddMin = oddValues.length > 0 ? Math.min(...oddValues) : null;
+        
+        return { evenMax, evenMin, oddMax, oddMin };
+    }
+    
+    // Функція для сортування масиву в порядку спадання методом вибору
+    function selectionSortDesc(arr) {
+        const sortedArr = [...arr];
+        
+        for (let i = 0; i < sortedArr.length - 1; i++) {
+            let maxIndex = i;
+            
+            for (let j = i + 1; j < sortedArr.length; j++) {
+                if (sortedArr[j] > sortedArr[maxIndex]) {
+                    maxIndex = j;
+                }
+            }
+            
+            if (maxIndex !== i) {
+                [sortedArr[i], sortedArr[maxIndex]] = [sortedArr[maxIndex], sortedArr[i]];
+            }
+        }
+        
+        return sortedArr;
+    }
+    
+    const sizeInput = prompt('Введіть кількість елементів масиву:');
+    if (sizeInput === null) {
+        alert('Операцію скасовано');
+        return;
+    }
+    
+    const size = Number(sizeInput);
+    if (isNaN(size) || size <= 0) {
+        alert('Будь ласка, введіть додатнє число');
+        return;
+    }
+    
+    const arr = [];
+    for (let i = 0; i < size; i++) {
+        const elementInput = prompt(\`Введіть елемент \${i + 1}:\`);
+        if (elementInput === null) {
+            alert('Операцію скасовано');
+            return;
+        }
+        const element = Number(elementInput);
+        if (isNaN(element)) {
+            alert('Будь ласка, введіть числове значення');
+            return;
+        }
+        arr.push(element);
+    }
+    
+    console.log('Вхідний масив:', arr);
+    
+    const { evenMax, evenMin, oddMax, oddMin } = findMinMaxForIndices(arr);
+    console.log('Максимум серед парних індексів:', evenMax);
+    console.log('Мінімум серед парних індексів:', evenMin);
+    console.log('Максимум серед непарних індексів:', oddMax);
+    console.log('Мінімум серед непарних індексів:', oddMin);
+    
+    const sortedArr = selectionSortDesc(arr);
+    console.log('Вихідний масив (відсортований):', sortedArr);
+    
+    alert(\`Вхідний масив: [\${arr.join(', ')}]\\nВихідний масив: [\${sortedArr.join(', ')}]\\n\\nПеревірте консоль для деталей!\`);
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task7.1.png" alt="Скріншот завдання 7.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task7.2.png" alt="Скріншот завдання 7.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task7.3.png" alt="Скріншот завдання 7.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма реалізує дві функції: findMinMaxForIndices (знаходить мінімум та максимум для елементів з парними та непарними індексами) та selectionSortDesc (сортує масив методом вибору в порядку спадання). Використовуються оператор модуля (%) для визначення парності індексу, Math.max/Math.min для знаходження екстремумів, та деструктуризація масивів для обміну значень.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task8' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 8</h4>
+            <p>Робота з двовимірними масивами. Створення масивів додатніх та від'ємних чисел. Модифікація елементів масиву.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 8
+buttons[7].addEventListener('click', function() {
+    // Створити двовимірний масив додатніх та від'ємних чисел
+    const rows = 3;
+    const cols = 4;
+    const twoDArray = [];
+    
+    for (let i = 0; i < rows; i++) {
+        twoDArray[i] = [];
+        for (let j = 0; j < cols; j++) {
+            // Генерувати випадкові числа від -50 до 50
+            twoDArray[i][j] = Math.floor(Math.random() * 101) - 50;
+        }
+    }
+    
+    console.log('Двовимірний масив:', twoDArray);
+    
+    // Створити масиви додатніх та від'ємних чисел
+    const positiveArray = [];
+    const negativeArray = [];
+    
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (twoDArray[i][j] > 0) {
+                positiveArray.push(twoDArray[i][j]);
+            } else if (twoDArray[i][j] < 0) {
+                negativeArray.push(twoDArray[i][j]);
+            }
+        }
+    }
+    
+    console.log('Масив додатніх чисел:', positiveArray);
+    console.log('Масив від\'ємних чисел:', negativeArray);
+    
+    alert('Двовимірний масив створено!\\n\\nПеревірте консоль для деталей!');
+    
+    // Замінити третій елемент додатнього масиву на від'ємне значення з prompt
+    if (positiveArray.length >= 3) {
+        const replacementInput = prompt('Введіть від\'ємне число для заміни третього елемента додатнього масиву:');
+        if (replacementInput !== null) {
+            const replacement = Number(replacementInput);
+            if (!isNaN(replacement) && replacement < 0) {
+                positiveArray[2] = replacement;
+                console.log('Масив додатніх чисел після заміни:', positiveArray);
+                alert(\`Третій елемент замінено на \${replacement}\\n\\nПеревірте консоль для деталей!\`);
+            } else {
+                alert('Будь ласка, введіть від\'ємне число');
+            }
+        }
+    } else {
+        alert('Недостатньо додатніх чисел у масиві для заміни');
+    }
+});</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task8.1.png" alt="Скріншот завдання 8.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task8.2.png" alt="Скріншот завдання 8.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task8.3.png" alt="Скріншот завдання 8.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task8.4.png" alt="Скріншот завдання 8.4" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма створює двовимірний масив (3x4) з випадкових чисел від -50 до 50, розділяє числа на додатні та від'ємні масиви, а потім дозволяє замінити третій елемент додатнього масиву на від'ємне значення через prompt. Використовуються вкладені цикли для роботи з двовимірним масивом, Math.random() для генерації випадкових чисел, та умовні оператори для фільтрації.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task9' && lab === '5') {
+    html = `
+          <div>
+            <h4>Завдання 9</h4>
+            <p>Створення інтерактивного слайд-шоу зображень з можливістю управління швидкістю, розміром та циклічністю. Робота з DOM та таймерами.</p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>buttons[8].addEventListener('click', function() {
+        // Створити вікно слайд-шоу
+        const modal = document.createElement('div');
+        modal.className = 'slideshow-modal';
+        modal.innerHTML = \`
+            &lt;div class="slideshow-container"&gt;
+                &lt;div class="slideshow-header"&gt;
+                    &lt;h3&gt;Слайд-шоу&lt;/h3&gt;
+                    &lt;button class="close-slideshow"&gt;&amp;times;&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="slideshow-controls"&gt;
+                    &lt;div class="control-group"&gt;
+                        &lt;label&gt;Час (сек):&lt;/label&gt;
+                        &lt;input type="number" id="slideshow-speed" value="3" min="1" max="10"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="control-group"&gt;
+                        &lt;label&gt;Розмір (%):&lt;/label&gt;
+                        &lt;input type="number" id="slideshow-size" value="100" min="50" max="200"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="control-group"&gt;
+                        &lt;label&gt;
+                            &lt;input type="checkbox" id="slideshow-loop" checked&gt; Циклічність
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="slideshow-content"&gt;
+                    &lt;img id="slideshow-image" src="assets/kobzar.png" alt="Slideshow image"&gt;
+                &lt;/div&gt;
+                &lt;div class="slideshow-nav"&gt;
+                    &lt;button class="prev-btn"&gt;‹&lt;/button&gt;
+                    &lt;button class="play-pause-btn"&gt;Пауза&lt;/button&gt;
+                    &lt;button class="next-btn"&gt;›&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        \`;
+        
+        document.body.appendChild(modal);
+        
+        // Масив зображень
+        const images = [
+            'assets/kobzar.png',
+            'assets/book1.webp',
+            'assets/book2.png',
+            'assets/book3.png',
+            'assets/stackOfBooks.png',
+            'assets/stackOfBooks2.png'
+        ];
+        
+        let currentIndex = 0;
+        let isPlaying = true;
+        let slideshowInterval;
+        let slideDuration = 3;
+        
+        const imgElement = document.getElementById('slideshow-image');
+        const speedInput = document.getElementById('slideshow-speed');
+        const sizeInput = document.getElementById('slideshow-size');
+        const loopCheckbox = document.getElementById('slideshow-loop');
+        const playPauseBtn = modal.querySelector('.play-pause-btn');
+        const prevBtn = modal.querySelector('.prev-btn');
+        const nextBtn = modal.querySelector('.next-btn');
+        const closeBtn = modal.querySelector('.close-slideshow');
+        
+        function updateImage() {
+            imgElement.src = images[currentIndex];
+        }
+        
+        function startSlideshow() {
+            if (slideshowInterval) {
+                clearInterval(slideshowInterval);
+            }
+            
+            slideshowInterval = setInterval(() => {
+                if (isPlaying) {
+                    currentIndex++;
+                    if (currentIndex >= images.length) {
+                        if (loopCheckbox.checked) {
+                            currentIndex = 0;
+                        } else {
+                            currentIndex = images.length - 1;
+                            isPlaying = false;
+                            playPauseBtn.textContent = 'Відтворити';
+                        }
+                    }
+                    updateImage();
+                }
+            }, slideDuration * 1000);
+        }
+        
+        function updateSize() {
+            const size = sizeInput.value;
+            imgElement.style.width = size + '%';
+            imgElement.style.height = 'auto';
+        }
+        
+        function updateSpeed() {
+            slideDuration = parseInt(speedInput.value);
+            if (isPlaying) {
+                startSlideshow();
+            }
+        }
+        
+        // Обробники подій
+        playPauseBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            playPauseBtn.textContent = isPlaying ? 'Пауза' : 'Відтворити';
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = loopCheckbox.checked ? images.length - 1 : 0;
+            }
+            updateImage();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = loopCheckbox.checked ? 0 : images.length - 1;
+            }
+            updateImage();
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            clearInterval(slideshowInterval);
+            modal.remove();
+        });
+        
+        speedInput.addEventListener('change', updateSpeed);
+        sizeInput.addEventListener('change', updateSize);
+        
+        // Ініціалізація
+        updateImage();
+        updateSize();
+        startSlideshow();
+    });</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div class="screenshots-grid">
+              <figure>
+                <img src="assets/task4/screenshots/task9.1.png" alt="Скріншот завдання 9.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+              <figure>
+                <img src="assets/task4/screenshots/task9.2.png" alt="Скріншот завдання 9.2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Опис:</h5>
+            <p>Програма створює інтерактивне слайд-шоу з можливістю управління швидкістю переключення, розміром зображення, циклічністю перегляду. Використовуються методи роботи з DOM (createElement, appendChild, querySelector, addEventListener), таймери (setInterval, clearInterval), масиви для зберігання шляхів до зображень, та обробка подій для навігації (попереднє/наступне зображення, пауза/відтворення, закриття модального вікна).</p>
+          </div>
+        `;
+  }
+
+  if (key === 'conclusion' && lab === '5') {
+    html = `
+          <div>
+            <h4>Висновки</h4>
+            <p>У ході практичної роботи було вивчено основи мови JavaScript, включно з типами даних, операторами, умовними інструкціями, циклами, функціями, об'єктами та масивами. Освоєно роботу з вбудованими методами для роботи з рядками та масивами. Реалізовано систему авторизації з використанням вкладених умовних операторів та обробки помилок.</p>
+            <p>Вивчено роботу з функціями як засобом інкапсуляції логіки та організації коду. Реалізовано алгоритми фільтрації масивів, сортування методом вибору, знаходження мінімальних та максимальних значень для різних груп елементів. Освоєно роботу з двовимірними масивами та модифікацію їх елементів.</p>
+            <p>Реалізовано інтерактивне слайд-шоу з використанням DOM API для динамічного створення елементів, обробки подій та управління таймерами. Під час виконання роботи сформовано навички використання методів prompt() та alert() для взаємодії з користувачем, консольного виведення для налагодження, та обробки помилок введення.</p>
+            <p>Лабораторна робота дозволила закріпити теоретичні знання про синтаксис JavaScript, оператори порівняння та логічні оператори, умовні інструкції if-else та switch-case, цикли for та while, функції та їх параметри, роботу з об'єктами та масивами, а також отримати практичний досвід створення інтерактивних веб-застосунків з використанням JavaScript.</p>
           </div>
         `;
   }
