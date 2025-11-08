@@ -61,6 +61,22 @@ export function getPillsForLab(labNumber) {
     { section: 'conclusion', text: 'Висновки' }
   ];
 
+  // Практична робота №5
+  const lab6Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'task1.1', text: 'Завдання 1.1' },
+    { section: 'task1.3', text: 'Завдання 1.3' },
+    { section: 'task1.5', text: 'Завдання 1.5' },
+    { section: 'task1.7', text: 'Завдання 1.7' },
+    { section: 'task1.9', text: 'Завдання 1.9' },
+    { section: 'task1.10', text: 'Завдання 1.10' },
+    { section: 'task2.1', text: 'Завдання 2.1' },
+    { section: 'task2.3', text: 'Завдання 2.3' },
+    { section: 'task2.5', text: 'Завдання 2.5' },
+    { section: 'task2.7', text: 'Завдання 2.7' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
+
   const blankPills = [
     { section: 'section1', text: 'Розділ 1' },
     { section: 'section2', text: 'Розділ 2' },
@@ -74,6 +90,7 @@ export function getPillsForLab(labNumber) {
   if (labNumber === '3') return lab3Pills;
   if (labNumber === '4') return lab4Pills;
   if (labNumber === '5') return lab5Pills;
+  if (labNumber === '6') return lab6Pills;
   return blankPills;
 }
 
@@ -120,7 +137,17 @@ export function getSectionTitle(key){
     task6: 'Завдання 6',
     task7: 'Завдання 7',
     task8: 'Завдання 8',
-    task9: 'Завдання 9'
+    task9: 'Завдання 9',
+    'task1.1': 'Завдання 1.1',
+    'task1.3': 'Завдання 1.3',
+    'task1.5': 'Завдання 1.5',
+    'task1.7': 'Завдання 1.7',
+    'task1.9': 'Завдання 1.9',
+    'task1.10': 'Завдання 1.10',
+    'task2.1': 'Завдання 2.1',
+    'task2.3': 'Завдання 2.3',
+    'task2.5': 'Завдання 2.5',
+    'task2.7': 'Завдання 2.7'
   };
   return titles[key];
 }
@@ -2676,6 +2703,554 @@ buttons[7].addEventListener('click', function() {
             <p>Вивчено роботу з функціями як засобом інкапсуляції логіки та організації коду. Реалізовано алгоритми фільтрації масивів, сортування методом вибору, знаходження мінімальних та максимальних значень для різних груп елементів. Освоєно роботу з двовимірними масивами та модифікацію їх елементів.</p>
             <p>Реалізовано інтерактивне слайд-шоу з використанням DOM API для динамічного створення елементів, обробки подій та управління таймерами. Під час виконання роботи сформовано навички використання методів prompt() та alert() для взаємодії з користувачем, консольного виведення для налагодження, та обробки помилок введення.</p>
             <p>Лабораторна робота дозволила закріпити теоретичні знання про синтаксис JavaScript, оператори порівняння та логічні оператори, умовні інструкції if-else та switch-case, цикли for та while, функції та їх параметри, роботу з об'єктами та масивами, а також отримати практичний досвід створення інтерактивних веб-застосунків з використанням JavaScript.</p>
+          </div>
+        `;
+  }
+
+  // Lab 6 (Практична робота №5) content
+  if (key === 'topic' && lab === '6') {
+    html = `
+          <div>
+            <p><strong>Тема практичної:</strong> ОБ'ЄКТ. МЕТОДИ ОБ'ЄКТА. МАСИВ ОБ'ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ. ПЕРЕБИРАЮЧІ МЕТОДИ МАСИВУ</p>
+            <p><strong>Мета практичної:</strong> Придбати практичні навички роботи з об'єктами. Методи об'єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JAVASCRIPT
+</p>
+            <p><strong>Назва проєкту:</strong> BookStore Pro</p>
+            <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
+            <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів.</p>
+            <ul>
+              <li><strong>Посилання на виконані завдання:</strong> <a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></li>
+              <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+              <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+              <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+            </ul>
+          </div>
+        `;
+  }
+
+  if (key === 'task1.1' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 1.1</h4>
+            <p><strong>Опис:</strong> Реалізація функції createProduct, яка приймає об'єкт товару та callback-функцію. Функція створює новий продукт з унікальним id та викликає callback з цим продуктом. Продемонстровано використання функцій вищого порядку та стрілочних функцій.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1.1: Функції для роботи з продуктами
+const createProduct = (obj, callback) => {
+    const product = {
+        ...obj,
+        id: Date.now() + Math.random()
+    };
+    callback(product);
+};
+
+const logProduct = (product) => {
+    console.log('Продукт:', product);
+};
+
+const logTotalPrice = (product) => {
+    const totalPrice = product.price * (product.quantity || 1);
+    console.log('Загальна вартість товару:', totalPrice);
+};
+
+// Використання:
+const productObj = { name: 'Телефон', price: 10000, quantity: 2 };
+createProduct(productObj, logProduct);
+createProduct(productObj, logTotalPrice);</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task1.1.png" alt="Скріншот завдання 1.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Функція createProduct використовує оператор spread (...) для копіювання властивостей об'єкта та додає унікальний id на основі поточного часу та випадкового числа. Callback-функції logProduct та logTotalPrice демонструють різні способи обробки продукту: логування самого продукту та обчислення загальної вартості з урахуванням кількості.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task1.3' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 1.3</h4>
+            <p><strong>Опис:</strong> Реалізація функції для роботи з медикаментами. Потрібно отримати масив назв препаратів, прибрати медикаменти з простроченим строком зберігання та відсортувати валідні медикаменти за датою виготовлення.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1.3: Робота з медикаментами
+const processMedicines = () => {
+    const medicines = {
+        Агалгін: new Date("2022-05-01"),
+        Ношпа: new Date("2026-07-02"),
+        Альфахолін: new Date("2024-12-21"),
+        Аспірин: new Date("2022-08-15"),
+        Аспаркам: new Date("2024-04-18"),
+    };
+
+    const now = new Date();
+    
+    // Отримати масив назв препаратів
+    const medicineNames = Object.keys(medicines);
+    
+    // Прибрати медикаменти, в яких строк зберігання вже пройшов
+    const validMedicines = Object.entries(medicines)
+        .filter(([name, date]) => date > now)
+        .sort((a, b) => a[1] - b[1]); // Сортувати у хронологічному порядку
+    
+    const result = validMedicines.map(([name]) => name);
+    
+    console.log('Назви препаратів:', medicineNames);
+    console.log('Валідні медикаменти (відсортовані):', result);
+    
+    return result;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task1.3.png" alt="Скріншот завдання 1.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Використано метод Object.keys() для отримання масиву назв препаратів. Object.entries() дозволяє отримати пари ключ-значення для подальшої обробки. Метод filter() видаляє медикаменти з простроченим строком зберігання, порівнюючи дату з поточною. Метод sort() сортує медикаменти за датою виготовлення у зростаючому порядку. Метод map() трансформує масив пар [назва, дата] у масив назв.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task1.5' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 1.5</h4>
+            <p><strong>Опис:</strong> Реалізація функції для обробки масиву фруктів. Потрібно додати id до кожного фрукту та застосувати знижку 20% до ціни.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1.5: Робота з фруктами
+const processFruits = () => {
+    const fruits = [
+        { name: "apple", price: 200 },
+        { name: "orange", price: 300 },
+        { name: "grapes", price: 750 },
+    ];
+
+    const processedFruits = fruits.map((fruit, index) => ({
+        id: index + 1,
+        name: fruit.name,
+        price: fruit.price * 0.8 // Знижка 20%
+    }));
+
+    console.log('Фрукти зі знижкою 20% та id:', processedFruits);
+    
+    return processedFruits;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task1.5.png" alt="Скріншот завдання 1.5" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Використано метод map() для трансформації масиву фруктів. Кожному фрукту додається id на основі індексу, а ціна зменшується на 20% (множиться на 0.8). Використано стрілочну функцію та короткий синтаксис об'єктного літералу для створення нового об'єкта з оновленими властивостями.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task1.7' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 1.7</h4>
+            <p><strong>Опис:</strong> Реалізація класу Client з приватними властивостями #login та #email. Клас повинен мати геттери та сеттери для доступу до цих властивостей.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1.7: Клас Client з приватними властивостями
+class Client {
+    #login;
+    #email;
+
+    constructor(login, email) {
+        this.#login = login;
+        this.#email = email;
+    }
+
+    get login() {
+        return this.#login;
+    }
+
+    set login(value) {
+        this.#login = value;
+    }
+
+    get email() {
+        return this.#email;
+    }
+
+    set email(value) {
+        this.#email = value;
+    }
+}
+
+const testClient = () => {
+    const client = new Client('user123', 'user@example.com');
+    console.log('Початковий login:', client.login);
+    console.log('Початковий email:', client.email);
+    
+    client.login = 'newuser456';
+    client.email = 'newuser@example.com';
+    
+    console.log('Оновлений login:', client.login);
+    console.log('Оновлений email:', client.email);
+    
+    return client;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task1.7.png" alt="Скріншот завдання 1.7" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Використано синтаксис приватних полів класу з префіксом #. Це забезпечує інкапсуляцію даних, роблячи властивості недоступними ззовні класу. Геттери та сеттери дозволяють контролювати доступ до приватних властивостей та валідувати дані при необхідності.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task1.9' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 1.9</h4>
+            <p><strong>Опис:</strong> Реалізація функції для підрахунку кількості кожного тегу в масиві твітів. Потрібно зібрати статистику використання тегів.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1.9: Підрахунок тегів
+const countTags = () => {
+    const tweets = [
+        { id: "000", likes: 5, tags: ["js", "nodejs"] },
+        { id: "001", likes: 2, tags: ["html", "css"] },
+        { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+        { id: "003", likes: 8, tags: ["css", "react"] },
+        { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+    ];
+
+    const tagCounts = {};
+    
+    tweets.forEach(tweet => {
+        tweet.tags.forEach(tag => {
+            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+        });
+    });
+
+    console.log('Кількість тегів:', tagCounts);
+    
+    return tagCounts;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task1.9.png" alt="Скріншот завдання 1.9" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Використано вкладені цикли forEach() для обходу масиву твітів та масиву тегів у кожному твіті. Використано об'єкт tagCounts як акумулятор для зберігання кількості кожного тегу. Використано логічний оператор || для ініціалізації лічильника тегу значенням 0, якщо тег ще не зустрічався. Це демонструє роботу з вкладеними структурами даних та агрегацію даних.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task1.10' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 1.10</h4>
+            <p><strong>Опис:</strong> Реалізація функції для перевірки правильності закриття дужок у рядку. Потрібно перевірити, чи всі дужки ((), {}, []) правильно закриті та парні.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 1.10: Перевірка правильності закриття дужок
+const checkBrackets = (str) => {
+    const stack = [];
+    const pairs = {
+        '(': ')',
+        '{': '}',
+        '[': ']'
+    };
+    const openBrackets = Object.keys(pairs);
+    const closeBrackets = Object.values(pairs);
+
+    for (let char of str) {
+        if (openBrackets.includes(char)) {
+            stack.push(char);
+        } else if (closeBrackets.includes(char)) {
+            if (stack.length === 0) {
+                return false;
+            }
+            const lastOpen = stack.pop();
+            if (pairs[lastOpen] !== char) {
+                return false;
+            }
+        }
+    }
+
+    return stack.length === 0;
+};
+
+const testCheckBrackets = () => {
+    const testCases = [
+        'function test() { return [1, 2, 3]; }',
+        'function test() { return [1, 2, 3]; ',
+        'function test() { return [1, 2, 3; }',
+        '(){}[]',
+        '([{}])',
+        '([)]',
+        '((()))',
+        '({[}])'
+    ];
+
+    console.log('Тестування функції checkBrackets:');
+    testCases.forEach(testCase => {
+        const result = checkBrackets(testCase);
+        console.log(\`"\${testCase.substring(0, 30)}..." => \${result}\`);
+    });
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task1.10.png" alt="Скріншот завдання 1.10" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Алгоритм використовує структуру даних "стек" (stack) для відстеження відкритих дужок. При зустрічі відкриваючої дужки вона додається до стеку. При зустрічі закриваючої дужки перевіряється, чи відповідає вона останній відкритій дужці зі стеку. Якщо стек порожній після обробки всього рядка, всі дужки правильно закриті. Це класичний приклад використання стеку для розв'язання задач перевірки вкладеності.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task2.1' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 2.1</h4>
+            <p><strong>Опис:</strong> Реалізація функції для об'єднання всіх values з масивів об'єктів в один масив. Використати метод flatMap() для трансформації та "сплющення" масиву.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 2.1: Об'єднати всі values з масивів в один масив
+const combineValues = () => {
+    const data = [
+        { id: 1, values: [1, 2, 3] },
+        { id: 2, values: [4, 5, 6] },
+        { id: 3, values: [7, 8, 9] },
+    ];
+
+    const result = data.flatMap(item => item.values);
+    
+    console.log('Початкові дані:', data);
+    console.log('Об\'єднаний масив:', result);
+    
+    return result;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task2.1.png" alt="Скріншот завдання 2.1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Метод flatMap() поєднує функціональність map() та flat(). Він застосовує функцію до кожного елемента масиву та "сплющує" результат на один рівень глибини. У цьому випадку кожен об'єкт трансформується в масив values, а потім всі масиви об'єднуються в один плоский масив. Це ефективніше за послідовне використання map() та flat().</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task2.3' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 2.3</h4>
+            <p><strong>Опис:</strong> Реалізація функції для перевірки, чи всі числа в масиві є парними. Використати метод every() для перевірки умови для всіх елементів.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 2.3: Перевірити, чи всі числа парні
+const checkAllEven = () => {
+    const numbers = [2, 4, 6, 8, 10];
+    
+    const allEven = numbers.every(num => num % 2 === 0);
+    
+    console.log('Масив чисел:', numbers);
+    console.log('Всі числа парні?', allEven);
+    
+    return allEven;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task2.3.png" alt="Скріншот завдання 2.3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Метод every() повертає true, якщо всі елементи масиву задовольняють заданій умові. У цьому випадку перевіряється, чи залишок від ділення кожного числа на 2 дорівнює 0, що означає парність. Метод every() зупиняється при першому елементі, який не задовольняє умову, повертаючи false. Якщо всі елементи пройшли перевірку, повертається true.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task2.5' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 2.5</h4>
+            <p><strong>Опис:</strong> Реалізація функції для сортування масиву рядків за алфавітом. Використати метод sort() для сортування масиву.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 2.5: Відсортувати масив рядків за алфавітом
+const sortStrings = () => {
+    const stringArray = ['banana', 'orange', 'apple', 'pear'];
+    
+    const sorted = [...stringArray].sort();
+    
+    console.log('Початковий масив:', stringArray);
+    console.log('Відсортований масив:', sorted);
+    
+    return sorted;
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task2.5.png" alt="Скріншот завдання 2.5" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Метод sort() сортує елементи масиву на місці та повертає відсортований масив. Для рядків використовується алфавітне сортування за замовчуванням. Оператор spread (...) використовується для створення копії масиву перед сортуванням, щоб не змінювати оригінальний масив. Це демонструє принцип іммутабельності даних.</p>
+          </div>
+        `;
+  }
+
+  if (key === 'task2.7' && lab === '6') {
+    html = `
+          <div>
+            <h4>Завдання 2.7</h4>
+            <p><strong>Опис:</strong> Реалізація класу Calculator з методом chaining (ланцюжковим викликом методів). Клас повинен підтримувати послідовні виклики методів для виконання математичних операцій.</p>
+            
+            <h5>Посилання на застосунок:</h5>
+            <p><a href="assets/task5/app/task5.html" target="_blank" rel="noopener">assets/task5/app/task5.html</a></p>
+            
+            <h5>Програмний код:</h5>
+            <pre><code>// Завдання 2.7: Клас Calculator з методом chaining
+class Calculator {
+    constructor() {
+        this.value = 0;
+    }
+
+    number(value) {
+        this.value = value;
+        return this;
+    }
+
+    getResult() {
+        return this.value;
+    }
+
+    add(value) {
+        this.value += value;
+        return this;
+    }
+
+    subtract(value) {
+        this.value -= value;
+        return this;
+    }
+
+    divide(value) {
+        if (value === 0) {
+            throw new Error('Неможливо ділити на нуль');
+        }
+        this.value /= value;
+        return this;
+    }
+
+    multiply(value) {
+        this.value *= value;
+        return this;
+    }
+}
+
+const testCalculator = () => {
+    try {
+        const calc = new Calculator();
+        
+        const result = calc
+            .number(10)      // Встановлюємо початкове значення 10
+            .add(5)          // Додаємо 5 (10 + 5 = 15)
+            .subtract(3)     // Віднімаємо 3 (15 - 3 = 12)
+            .multiply(4)     // Множимо на 4 (12 * 4 = 48)
+            .divide(2)       // Ділимо на 2 (48 / 2 = 24)
+            .getResult();    // Отримуємо результат: 24
+
+        console.log('Результат обчислень:', result);
+        
+        return result;
+    } catch (error) {
+        console.error('Помилка:', error.message);
+        return null;
+    }
+};</code></pre>
+
+            <h5>Скріншоти результатів виконання:</h5>
+            <div>
+              <figure>
+                <img src="assets/task5/screenshots/task2.7.png" alt="Скріншот завдання 2.7" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              </figure>
+            </div>
+            
+            <h5>Пояснення:</h5>
+            <p>Метод chaining реалізується шляхом повернення this з методів класу. Це дозволяє послідовно викликати методи на одному об'єкті. Клас Calculator зберігає поточне значення у властивості value. Кожен метод (add, subtract, multiply, divide) модифікує це значення та повертає this для подальших викликів. Метод number() встановлює початкове значення. Додано обробку помилок для випадку ділення на нуль. Це демонструє патерн Fluent Interface та роботу з контекстом виклику (this).</p>
+          </div>
+        `;
+  }
+
+  if (key === 'conclusion' && lab === '6') {
+    html = `
+          <div>
+            <h4>Висновки</h4>
+            <p>У ході практичної роботи №5 було вивчено основи роботи з об'єктами, методами об'єктів, класами та прототипами в JavaScript. Освоєно використання функцій вищого порядку, стрілочних функцій та замикань для створення більш елегантного та функціонального коду.</p>
+            <p>Реалізовано функції з використанням callback-функцій, що демонструє концепцію функцій вищого порядку. Вивчено роботу з методами масивів: map(), filter(), sort(), forEach(), flatMap(), every(). Ці методи дозволяють працювати з масивами в функціональному стилі, роблячи код більш читабельним та підтримуваним.</p>
+            <p>Освоєно роботу з приватними полями з префіксом #, геттерами та сеттерами. Реалізовано клас Client з інкапсуляцією даних та клас Calculator з методом chaining, що демонструє використання контексту виклику.</p>
+            <p>Реалізовано алгоритми для роботи з датами, об'єктами та масивами: фільтрація медикаментів за строком зберігання, сортування даних, підрахунок статистики тегів, перевірка правильності закриття дужок з використанням структури даних "стек".</p>
+            <p>Практична робота дозволила закріпити теоретичні знання про об'єктно-орієнтоване програмування в JavaScript, функціональне програмування, роботу з методами масивів та об'єктів, а також отримати практичний досвід створення класів та використання сучасних можливостей мови JavaScript для написання чистого та ефективного коду.</p>
           </div>
         `;
   }
