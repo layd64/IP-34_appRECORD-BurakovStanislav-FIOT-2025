@@ -1,4 +1,3 @@
-// Масив зображень для галереї
 const images = [
     {
         preview: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400',
@@ -47,10 +46,8 @@ const images = [
     },
 ];
 
-// Отримуємо контейнер галереї
 const gallery = document.querySelector('.gallery');
 
-// Функція для створення розмітки галереї
 function createGalleryMarkup(images) {
     return images
         .map(
@@ -70,33 +67,25 @@ function createGalleryMarkup(images) {
         .join('');
 }
 
-// Вставляємо розмітку в DOM
 gallery.innerHTML = createGalleryMarkup(images);
 
-// Делегування подій: обробник кліка на галереї
 gallery.addEventListener('click', onGalleryClick);
 
 function onGalleryClick(event) {
-    // Запобігаємо стандартній поведінці посилання
     event.preventDefault();
 
-    // Перевіряємо, чи клік був на зображенні
     if (event.target.nodeName !== 'IMG') {
         return;
     }
 
-    // Отримуємо посилання на велике зображення
     const largeImageURL = event.target.dataset.source;
     const imageDescription = event.target.alt;
 
-    // Виводимо в консоль для перевірки
     console.log('Посилання на велике зображення:', largeImageURL);
 
-    // Відкриваємо модальне вікно з великим зображенням
     openModal(largeImageURL, imageDescription);
 }
 
-// Функція для відкриття модального вікна
 function openModal(imageURL, description) {
     const instance = basicLightbox.create(`
     <div class="modal">

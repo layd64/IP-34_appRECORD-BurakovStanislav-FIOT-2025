@@ -1,6 +1,4 @@
-/* Мінімальна стилізація */
 body {
-    font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -45,7 +43,7 @@ hr {
     border-top: 1px solid #ccc;
 }
 
-/* Task 8: Login form */
+/* task 8: login form */
 .login-form label {
     display: block;
     margin: 10px 0;
@@ -56,7 +54,7 @@ hr {
     margin: 5px 0;
 }
 
-/* Task 10: Boxes */
+/* task 10: Boxes */
 #boxes {
     display: flex;
     flex-wrap: wrap;

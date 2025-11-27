@@ -77,6 +77,32 @@ export function getPillsForLab(labNumber) {
     { section: 'conclusion', text: 'Висновки' }
   ];
 
+  // Практична робота №6 (Lab 7 in system)
+  const lab7Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'modal-window', text: 'Модальне вікно у власному застосунку' },
+    { section: 'task1', text: 'Завдання 1' },
+    { section: 'task3', text: 'Завдання 3' },
+    { section: 'task5', text: 'Завдання 5' },
+    { section: 'task7', text: 'Завдання 7' },
+    { section: 'task8', text: 'Завдання 8' },
+    { section: 'task9', text: 'Завдання 9' },
+    { section: 'task10', text: 'Завдання 10' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
+
+  // Практична робота №7 (Lab 8 in system)
+  const lab8Pills = [
+    { section: 'topic', text: 'Тема Мета Місце розташування сайту, звіту' },
+    { section: 'cart', text: 'Кошик у власному застосунку' },
+    { section: 'task1-gallery', text: 'Завдання 1. Галерея зображень' },
+    { section: 'task2-feedback', text: 'Завдання 2. Форма зворотного зв\'язку' },
+    { section: 'task3-timer', text: 'Завдання 3. Таймер зворотного відліку' },
+    { section: 'task4-promise', text: 'Завдання 4. Генератор промісів' },
+    { section: 'task5-imagesearch', text: 'Завдання 5. Пошук зображень' },
+    { section: 'conclusion', text: 'Висновки' }
+  ];
+
   const blankPills = [
     { section: 'section1', text: 'Розділ 1' },
     { section: 'section2', text: 'Розділ 2' },
@@ -91,10 +117,12 @@ export function getPillsForLab(labNumber) {
   if (labNumber === '4') return lab4Pills;
   if (labNumber === '5') return lab5Pills;
   if (labNumber === '6') return lab6Pills;
+  if (labNumber === '7') return lab7Pills;
+  if (labNumber === '8') return lab8Pills;
   return blankPills;
 }
 
-export function getSectionTitle(key){
+export function getSectionTitle(key) {
   const titles = {
     topic: 'Тема, мета, місце розташування',
     domain: 'Опис предметного середовища',
@@ -147,12 +175,21 @@ export function getSectionTitle(key){
     'task2.1': 'Завдання 2.1',
     'task2.3': 'Завдання 2.3',
     'task2.5': 'Завдання 2.5',
-    'task2.7': 'Завдання 2.7'
+    'task2.7': 'Завдання 2.7',
+    // Lab 6 (System 7)
+    'modal-window': 'Модальне вікно у власному застосунку',
+    // Lab 7 (System 8)
+    cart: 'Кошик у власному застосунку',
+    'task1-gallery': 'Завдання 1. Галерея зображень',
+    'task2-feedback': 'Завдання 2. Форма зворотного зв\'язку',
+    'task3-timer': 'Завдання 3. Таймер зворотного відліку',
+    'task4-promise': 'Завдання 4. Генератор промісів',
+    'task5-imagesearch': 'Завдання 5. Пошук зображень'
   };
   return titles[key];
 }
 
-export function getSectionHtml(key, lab){
+export function getSectionHtml(key, lab) {
   let html = 'Вміст секції з\'явиться тут.';
 
   // Lab 1
@@ -3253,6 +3290,1064 @@ const testCalculator = () => {
             <p>Практична робота дозволила закріпити теоретичні знання про об'єктно-орієнтоване програмування в JavaScript, функціональне програмування, роботу з методами масивів та об'єктів, а також отримати практичний досвід створення класів та використання сучасних можливостей мови JavaScript для написання чистого та ефективного коду.</p>
           </div>
         `;
+  }
+
+  // Lab 6 (System 7) Content
+  if (key === 'topic' && lab === '7') {
+    html = `
+      <div>
+        <p><strong>Тема практичної:</strong> ПРОТОТИПИ. КЛАСИ. ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM). ПОДІЇ. ОБ'ЄКТ ПОДІЇ. ДЕЛЕГУВАННЯ ПОДІЙ. </p>
+        <p><strong>Мета практичної:</strong> придбати практичні навички роботи з DOM, подіями. делегуванням подій. </p>
+        <p><strong>Назва проєкту:</strong> BookStore Pro</p>
+        <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
+        <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів.</p>
+        <ul>
+          <li><strong>Посилання на виконані завдання:</strong> <a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></li>
+          <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+          <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
+          <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+          <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+          <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+          <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+          <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+        </ul>
+      </div>
+    `;
+  }
+
+  if (key === 'modal-window' && lab === '7') {
+    html = `
+      <div>
+        <h4>Модальне вікно у власному застосунку</h4>
+        <p>У власному застосунку BookStore Pro реалізовано модальне вікно для перегляду деталей книги. При кліку на картку книги відкривається модальне вікно з розширеною інформацією: назва, автор, опис, ціна та кнопка додавання в кошик.</p>
+        
+        <h5>HTML (index.html)</h5>
+        <pre><code>&lt;div id="bookModal" class="modal"&gt;
+    &lt;div class="modal-backdrop"&gt;&lt;/div&gt;
+    &lt;div class="modal-content"&gt;
+        &lt;button class="modal-close" aria-label="Close modal"&gt;&times;&lt;/button&gt;
+        &lt;div class="modal-body"&gt;
+            &lt;img id="modalImage" src="" alt="Book Cover" class="modal-image"&gt;
+            &lt;div class="modal-info"&gt;
+                &lt;p id="modalPrice" class="modal-price"&gt;&lt;/p&gt;
+                &lt;h2 id="modalTitle" class="modal-title"&gt;&lt;/h2&gt;
+                &lt;p id="modalAuthor" class="modal-author"&gt;&lt;/p&gt;
+                &lt;p id="modalDescription" class="modal-description"&gt;&lt;/p&gt;
+                &lt;button class="modal-cart-btn"&gt;В КОШИК&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h5>CSS (styles.css)</h5>
+        <pre><code>.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: block;
+}</code></pre>
+
+        <h5>JavaScript (script.js)</h5>
+        <pre><code>// --- Book Modal Logic ---
+const bookModal = document.getElementById('bookModal');
+const booksGrid = document.querySelector('.books-grid');
+const modalImage = document.getElementById('modalImage');
+const modalPrice = document.getElementById('modalPrice');
+const modalTitle = document.getElementById('modalTitle');
+const modalAuthor = document.getElementById('modalAuthor');
+const modalDescription = document.getElementById('modalDescription');
+const modalCartBtn = document.querySelector('.modal-cart-btn');
+
+// Delegate click event on parent element .books-grid
+booksGrid.addEventListener('click', function (event) {
+    const bookCard = event.target.closest('.book-card');
+    const addToCartBtn = event.target.closest('button');
+
+    if (bookCard) {
+        // Get data from book card
+        const image = bookCard.querySelector('.book-image').src;
+        const price = bookCard.querySelector('.book-price').textContent;
+        const title = bookCard.querySelector('h3').textContent;
+        const author = bookCard.querySelector('.book-author').textContent;
+        const description = bookCard.getAttribute('data-description');
+
+        const bookData = { image, price, title, author, description };
+
+        if (addToCartBtn) {
+            // Add to cart directly
+            addToCart(bookData);
+        } else {
+            // Open modal
+            modalImage.src = image;
+            modalPrice.textContent = price;
+            modalTitle.textContent = title;
+            modalAuthor.textContent = author;
+            modalDescription.textContent = description;
+
+            // Store current book data on the modal button for adding to cart later
+            modalCartBtn.onclick = function () {
+                addToCart(bookData);
+                bookModal.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            bookModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+});
+
+// Generic Modal Closing Logic
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.modal-close');
+const backdrops = document.querySelectorAll('.modal-backdrop');
+
+function closeAllModals() {
+    modals.forEach(modal => modal.classList.remove('active'));
+    document.body.style.overflow = '';
+}
+
+closeButtons.forEach(btn => {
+    btn.addEventListener('click', closeAllModals);
+});
+
+backdrops.forEach(backdrop => {
+    backdrop.addEventListener('click', closeAllModals);
+});
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeAllModals();
+    }
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/modal.png" alt="Скріншот модального вікна" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <figcaption>Вигляд модального вікна з детальною інформацією про книгу</figcaption>
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p><strong>Делегування подій:</strong> Замість додавання слухача подій на кожну картку книги, використовується один слухач на батьківському елементі <code>.books-grid</code>. Це оптимізує продуктивність, особливо при великій кількості елементів.</p>
+        <p><strong>Відкриття модального вікна:</strong> При кліку на картку (але не на кнопку "В кошик") зчитуються дані з DOM-елементів картки (зображення, ціна, заголовок, автор) та атрибуту <code>data-description</code>. Ці дані динамічно вставляються у відповідні елементи модального вікна.</p>
+        <p><strong>Закриття модального вікна:</strong> Реалізовано універсальну функцію <code>closeAllModals</code>, яка спрацьовує при кліку на кнопку закриття (хрестик), на затемнений фон (backdrop) або при натисканні клавіші Escape.</p>
+        <p><strong>Блокування прокрутки:</strong> При відкритті модального вікна до <code>body</code> додається стиль <code>overflow: hidden</code>, щоб запобігти прокрутці основної сторінки.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task1' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 1: SHOW ME</h4>
+        <p><strong>Опис:</strong> Реалізовано функціонал, де при кліку на кнопку текст з інпуту виводиться в консоль. Це базовий приклад роботи з подією click та доступу до властивостей DOM-елементів.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;input type="text" id="task1Input" placeholder="Введіть текст..."&gt;
+&lt;button id="task1Button"&gt;SHOW ME&lt;/button&gt;</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>const task1Button = document.getElementById('task1Button');
+const task1Input = document.getElementById('task1Input');
+
+task1Button.addEventListener('click', () => {
+    console.log(task1Input.value);
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_1.png" alt="Скріншот завдання 1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Використовується метод addEventListener для додавання слухача події 'click' на кнопку. При кліку зчитується значення властивості value інпуту та виводиться в консоль.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task3' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 3: Приховати/Розкрити</h4>
+        <p><strong>Опис:</strong> Реалізовано кнопку, яка приховує введені дані в інпуті (замінює на зірочки) та розкриває їх назад. Це імітує функціонал показу/приховування паролю.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;input type="text" id="task3Input" placeholder="Введіть текст..."&gt;
+&lt;button id="task3Button"&gt;Приховати&lt;/button&gt;</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>const task3Button = document.getElementById('task3Button');
+const task3Input = document.getElementById('task3Input');
+let isHidden = false;
+let originalValue = '';
+
+task3Button.addEventListener('click', () => {
+    if (!isHidden) {
+        originalValue = task3Input.value;
+        task3Input.value = '*'.repeat(originalValue.length);
+        task3Button.textContent = 'Розкрити';
+        isHidden = true;
+    } else {
+        task3Input.value = originalValue;
+        task3Button.textContent = 'Приховати';
+        isHidden = false;
+    }
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_3.png" alt="Скріншот завдання 3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Змінна isHidden відстежує поточний стан. При приховуванні оригінальне значення зберігається, а в інпут записується рядок із зірочок тієї ж довжини. При розкритті оригінальне значення повертається в інпут.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task5' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 5: Клік у зеленому прямокутнику</h4>
+        <p><strong>Опис:</strong> Відслідковування кліку: чи відбувся він всередині зеленого прямокутника, чи зовні. Демонстрація роботи з координатами та перевіркою цільового елемента події.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;div id="place"&gt;&lt;/div&gt;</code></pre>
+
+        <h5>CSS</h5>
+        <pre><code>#place {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+}</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>window.addEventListener('click', (event) => {
+    const place = document.getElementById('place');
+    const isInsidePlace = place.contains(event.target);
+    console.log(isInsidePlace);
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_5.png" alt="Скріншот завдання 5" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Слухач подій додається на об'єкт window. Метод Node.contains() перевіряє, чи є event.target (елемент, по якому клікнули) нащадком елемента place або самим елементом place.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task7' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 7: Список категорій</h4>
+        <p><strong>Опис:</strong> Підрахунок кількості категорій та елементів у кожній категорії. Робота з навігацією по DOM-дереву.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;ul id="categories"&gt;
+    &lt;li class="item"&gt;
+        &lt;h2&gt;Animals&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Cat&lt;/li&gt;
+            &lt;li&gt;Hamster&lt;/li&gt;
+            &lt;li&gt;Horse&lt;/li&gt;
+            &lt;li&gt;Parrot&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;!-- ... --&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>const categories = document.querySelectorAll('#categories .item');
+console.log('Number of categories:', categories.length);
+
+categories.forEach(category => {
+    const title = category.querySelector('h2').textContent;
+    const itemsCount = category.querySelectorAll('li').length;
+    console.log('Category:', title);
+    console.log('Elements:', itemsCount);
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_7.png" alt="Скріншот завдання 7" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Використовується querySelectorAll для отримання всіх елементів категорій. Потім за допомогою forEach відбувається ітерація по кожній категорії, де знаходяться заголовок та кількість вкладених елементів списку.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task8' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 8: Форма логіна</h4>
+        <p><strong>Опис:</strong> Обробка відправки форми, валідація полів та виведення даних об'єктом у консоль. Запобігання перезавантаженню сторінки.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;form class="login-form"&gt;
+    &lt;label&gt;
+        Email
+        &lt;input type="email" name="email" /&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+        Password
+        &lt;input type="password" name="password" /&gt;
+    &lt;/label&gt;
+    &lt;button type="submit"&gt;Log in&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>const loginForm = document.querySelector('.login-form');
+
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const { email, password } = event.target.elements;
+
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+
+    if (!emailValue || !passwordValue) {
+        alert('All form fields must be filled in');
+        return;
+    }
+
+    const formData = {
+        email: emailValue,
+        password: passwordValue
+    };
+
+    console.log(formData);
+    event.target.reset();
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_8.png" alt="Скріншот завдання 8" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Метод event.preventDefault() запобігає стандартній відправці форми. Доступ до полів форми здійснюється через властивість elements. Після успішної валідації дані збираються в об'єкт, а форма очищується методом reset().</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task9' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 9: Зміна кольору фону</h4>
+        <p><strong>Опис:</strong> Зміна кольору фону сторінки на випадковий hex-колір при кліку на кнопку. Демонстрація роботи з інлайн-стилями через JavaScript.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;div class="widget"&gt;
+    &lt;p&gt;Background color: &lt;span class="color"&gt;-&lt;/span&gt;&lt;/p&gt;
+    &lt;button type="button" class="change-color"&gt;Change color&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>function getRandomHexColor() {
+    return \`#\${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, 0)}\`;
+}
+
+const changeColorBtn = document.querySelector('.change-color');
+const colorSpan = document.querySelector('.color');
+
+changeColorBtn.addEventListener('click', () => {
+    const color = getRandomHexColor();
+    document.body.style.backgroundColor = color;
+    colorSpan.textContent = color;
+});</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_9.png" alt="Скріншот завдання 9" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Функція getRandomHexColor генерує випадковий колір. При кліку на кнопку цей колір присвоюється властивості document.body.style.backgroundColor, а також виводиться текстове значення кольору.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task10' && lab === '7') {
+    html = `
+      <div>
+        <h4>Завдання 10: Створення колекції елементів</h4>
+        <p><strong>Опис:</strong> Створення та очищення колекції квадратів з випадковим кольором та зростаючим розміром. Робота з динамічним створенням та видаленням елементів DOM.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task6/app/index.html" target="_blank">assets/task6/app/index.html</a></p>
+
+        <h5>HTML</h5>
+        <pre><code>&lt;div id="controls"&gt;
+    &lt;input type="number" min="1" max="100" step="1" /&gt;
+    &lt;button type="button" data-create&gt;Create&lt;/button&gt;
+    &lt;button type="button" data-destroy&gt;Destroy&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="boxes"&gt;&lt;/div&gt;</code></pre>
+
+        <h5>JavaScript</h5>
+        <pre><code>const controls = document.querySelector('#controls');
+const input = controls.querySelector('input');
+const createBtn = controls.querySelector('[data-create]');
+const destroyBtn = controls.querySelector('[data-destroy]');
+const boxesContainer = document.querySelector('#boxes');
+
+function createBoxes(amount) {
+    const boxes = [];
+    let size = 30;
+
+    for (let i = 0; i < amount; i++) {
+        const box = document.createElement('div');
+        box.style.width = \`\${size}px\`;
+        box.style.height = \`\${size}px\`;
+        box.style.backgroundColor = getRandomHexColor();
+        boxes.push(box);
+        size += 10;
+    }
+
+    boxesContainer.append(...boxes);
+}
+
+function destroyBoxes() {
+    boxesContainer.innerHTML = '';
+}
+
+createBtn.addEventListener('click', () => {
+    const amount = Number(input.value);
+
+    if (amount < 1 || amount > 100) {
+        return;
+    }
+
+    destroyBoxes();
+    createBoxes(amount);
+    input.value = '';
+});
+
+destroyBtn.addEventListener('click', destroyBoxes);</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task6/screenshots/task6_10.png" alt="Скріншот завдання 10" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Функція createBoxes створює масив div-елементів з заданими стилями та додає їх у контейнер за одну операцію append(...boxes) для оптимізації продуктивності. destroyBoxes очищує вміст контейнера через innerHTML = ''.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'conclusion' && lab === '7') {
+    html = `
+      <div>
+        <h4>Висновки</h4>
+        <p>У ході виконання лабораторної роботи було набуто практичних навичок роботи з подіями в JavaScript. Реалізовано обробку кліків, відправку форм, зміну стилів елементів та динамічне створення DOM-елементів. Також розглянуто роботу з об'єктом події та методами запобігання дефолтній поведінці браузера.</p>
+        <p>Детально вивчено механізм делегування подій, що дозволяє оптимізувати продуктивність при роботі з великою кількістю елементів. Розглянуто методи роботи з координатами миші та елементів на сторінці. Отримано досвід створення інтерактивних інтерфейсів, таких як модальні вікна, галереї та динамічні списки.</p>
+        <p>Виконання завдань сприяло кращому розумінню взаємодії користувача з веб-сторінкою та методів реагування на ці дії за допомогою JavaScript.</p>
+      </div>
+    `;
+  }
+
+  // Lab 7 (System 8) Content
+  if (key === 'topic' && lab === '8') {
+    html = `
+      <div>
+        <p><strong>Тема практичної:</strong> МОДУЛЬНОСТЬ КОДУ. NODE.JS. JSON. WEB STORAGE API. АСИНХРОННІСТЬ. ПРОМІСИ. HTTP-ЗАПИТИ. REST API. AJAX. КРОС-ДОМЕННІ ЗАПИТИ. ПАГІНАЦІЯ. CRUD</p>
+        <p><strong>Мета практичної:</strong> придбати практичні навички роботи створення модального вікна; повторити процес створення макету, зокрема створення макету галереї довільних зображень; закріпити навички роботи з делегуванням подій.
+Придбати практичні навички роботи створення промісу. Методи then(), catch(,finally().Ланцюжки промісів. Методи класу Promise. Протокол HTTP. Протокол HTTPS.. REST API Формат запиту. HTTP-методи. HTTP-заголовки. AJAX. Fetch API. Робота з публічним REST API</p>
+        <p><strong>Назва проєкту:</strong> BookStore Pro</p>
+        <p><strong>Тема проєкту:</strong> Веб-застосунок для онлайн-магазину книг</p>
+        <p><strong>Мета проєкту:</strong> Прискорення та спрощення процесу купівлі книг, забезпечення зручного доступу до широкого асортименту літератури, створення інтуїтивного інтерфейсу для користувачів, підтримка ефективного управління каталогом і замовленнями для адміністраторів.</p>
+        <ul>
+          <li><strong>Посилання на виконані завдання:</strong> <a href="assets/task7/app/home.html" target="_blank">assets/task7/app/home.html</a></li>
+          <li><strong>Посилання на репозиторій власного WEB-застосунку:</strong> <a href="https://github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appWEB-Burakov-Stanislav-FIOT-2025</a></li>
+          <li><strong>Посилання на живу сторінку власного WEB-застосунку:</strong> <a href="https://layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appWEB-Burakov-Stanislav-FIOT-2025/</a></li>
+          <li><strong>Посилання на репозиторій звітного HTML-документа:</strong> <a href="https://github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_appRECORD-BurakovStanislav-FIOT-2025</a></li>
+          <li><strong>Посилання на живу сторінку звітного HTML-документа:</strong> <a href="https://layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_appRECORD-BurakovStanislav-FIOT-2025/</a></li>
+          <li><strong>Посилання на репозиторій з самостійними роботами:</strong> <a href="https://github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025" target="_blank" rel="noopener">github.com/layd64/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025</a></li>
+          <li><strong>Посилання на живу сторінку з самостійними роботами:</strong> <a href="https://layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/" target="_blank" rel="noopener">layd64.github.io/IP-34_-INDEPENDENT--Burakov-Stanislav-FIOT-2025/</a></li>
+          <li><strong>Посилання на макет сторінки у Figma:</strong> <a href="https://www.figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1" target="_blank" rel="noopener">figma.com/design/JzXNXmCqtPJ3gEQfRZUPc1/BookStore-Pro?node-id=0-1&t=XVJOPUvVyByF5fVK-1/</a></li>
+        </ul>
+      </div>
+    `;
+  }
+
+  if (key === 'cart' && lab === '8') {
+    html = `
+      <div>
+        <h4>Кошик у власному застосунку</h4>
+        <p>У власному застосунку BookStore Pro реалізовано повнофункціональний кошик товарів. Дані про обрані книги зберігаються в <code>localStorage</code>, що забезпечує збереження стану кошика навіть після перезавантаження сторінки або закриття браузера.</p>
+        
+        <h5>HTML (index.html)</h5>
+        <pre><code>&lt;div id="cartModal" class="modal"&gt;
+    &lt;div class="modal-backdrop"&gt;&lt;/div&gt;
+    &lt;div class="modal-content cart-modal-content"&gt;
+        &lt;button class="modal-close" aria-label="Close modal"&gt;&times;&lt;/button&gt;
+        &lt;div class="cart-modal-body"&gt;
+            &lt;h2&gt;Ваш Кошик&lt;/h2&gt;
+            &lt;div class="cart-items-container"&gt;
+                &lt;!-- Cart items will be populated here --&gt;
+                &lt;p class="empty-cart-message"&gt;Ваш кошик порожній&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="cart-pagination"&gt;&lt;/div&gt;
+            &lt;div class="cart-footer"&gt;
+                &lt;div class="cart-total"&gt;
+                    &lt;span&gt;Разом:&lt;/span&gt;
+                    &lt;span id="cartTotalAmount"&gt;0 грн&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;button class="checkout-btn"&gt;ОФОРМИТИ ЗАМОВЛЕННЯ&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h5>JavaScript (script.js)</h5>
+        <pre><code>// --- Cart Logic ---
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartBtn = document.getElementById('cartBtn');
+const cartCount = document.getElementById('cartCount');
+const cartItemsContainer = document.querySelector('.cart-items-container');
+const cartTotalAmount = document.getElementById('cartTotalAmount');
+
+function updateCartUI() {
+    const count = cart.length;
+    cartCount.textContent = count;
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function addToCart(book) {
+    cart.push(book);
+    updateCartUI();
+    alert(\`Книгу "\${book.title}" додано до кошика!\`);
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+    renderCart();
+}
+
+function renderCart() {
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+
+    // Calculate total price
+    cart.forEach(item => {
+        const priceValue = parseInt(item.price.replace(/\D/g, ''));
+        total += priceValue;
+    });
+    cartTotalAmount.textContent = \`\${total} грн\`;
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '&lt;p class="empty-cart-message"&gt;Ваш кошик порожній&lt;/p&gt;';
+        return;
+    }
+
+    // Pagination Logic (simplified for display)
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const itemsToShow = cart.slice(startIndex, endIndex);
+
+    itemsToShow.forEach((item, i) => {
+        const actualIndex = startIndex + i;
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = \`
+            &lt;img src="\${item.image}" alt="\${item.title}" class="cart-item-image"&gt;
+            &lt;div class="cart-item-details"&gt;
+                &lt;div class="cart-item-title"&gt;\${item.title}&lt;/div&gt;
+                &lt;div class="cart-item-author"&gt;\${item.author}&lt;/div&gt;
+                &lt;div class="cart-item-price"&gt;\${item.price}&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button class="cart-item-remove" data-index="\${actualIndex}"&gt;&times;&lt;/button&gt;
+        \`;
+        cartItemsContainer.appendChild(cartItem);
+    });
+
+    // Add event listeners to remove buttons
+    const removeButtons = document.querySelectorAll('.cart-item-remove');
+    removeButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const index = parseInt(this.getAttribute('data-index'));
+            removeFromCart(index);
+        });
+    });
+}</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task7/screenshots/cart.png" alt="Скріншот кошика" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <figcaption>Вигляд кошика з доданими товарами</figcaption>
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p><strong>LocalStorage:</strong> Використовується для зберігання масиву об'єктів книг. При завантаженні сторінки дані зчитуються з <code>localStorage.getItem('cart')</code>, а при будь-якій зміні (додавання/видалення) оновлюються через <code>localStorage.setItem</code>.</p>
+        <p><strong>Додавання товару:</strong> Функція <code>addToCart</code> додає об'єкт книги до масиву <code>cart</code> та оновлює лічильник товарів у шапці сайту.</p>
+        <p><strong>Рендеринг кошика:</strong> Функція <code>renderCart</code> очищує контейнер та заново створює HTML-елементи для кожного товару в кошику. Також вона підраховує загальну вартість, видаляючи нечислові символи з ціни (наприклад, "грн") для коректних математичних операцій.</p>
+        <p><strong>Видалення товару:</strong> Кожен елемент кошика має кнопку видалення з атрибутом <code>data-index</code>. При кліку викликається функція <code>removeFromCart</code>, яка видаляє елемент з масиву за індексом та перемальовує кошик.</p>
+        <p><strong>Пагінація:</strong> Реалізовано розбиття товарів на сторінки (по 5 товарів на сторінку), що дозволяє зручно переглядати велику кількість замовлень.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task1-gallery' && lab === '8') {
+    html = `
+      <div>
+        <h4>Завдання 1. Галерея зображень</h4>
+        <p><strong>Опис:</strong> Створено галерею зображень з використанням бібліотеки basicLightbox. Реалізовано делегування подій для обробки кліків по зображеннях та відкриття їх у модальному вікні.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task7/app/index.html" target="_blank">assets/task7/app/index.html</a></p>
+
+        <h5>HTML (index.html)</h5>
+        <pre><code>&lt;div class="container"&gt;
+    &lt;h1&gt;Галерея зображень&lt;/h1&gt;
+    &lt;ul class="gallery"&gt;&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+        <h5>JavaScript (gallery.js)</h5>
+        <pre><code>const images = [
+    {
+        preview: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400',
+        original: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200',
+        description: 'Гірський пейзаж з озером',
+    },
+    // ... інші зображення
+];
+
+const gallery = document.querySelector('.gallery');
+
+function createGalleryMarkup(images) {
+    return images
+        .map(({ preview, original, description }) => \`
+    &lt;li class="gallery__item"&gt;
+      &lt;a class="gallery__link" href="\${original}"&gt;
+        &lt;img
+          class="gallery__image"
+          src="\${preview}"
+          alt="\${description}"
+          data-source="\${original}"
+        /&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  \`).join('');
+}
+
+gallery.innerHTML = createGalleryMarkup(images);
+
+gallery.addEventListener('click', onGalleryClick);
+
+function onGalleryClick(event) {
+    event.preventDefault();
+    if (event.target.nodeName !== 'IMG') return;
+
+    const largeImageURL = event.target.dataset.source;
+    const imageDescription = event.target.alt;
+
+    const instance = basicLightbox.create(\`
+    &lt;div class="modal"&gt;
+      &lt;img src="\${imageURL}" alt="\${description}"&gt;
+      &lt;p class="modal__description"&gt;\${description}&lt;/p&gt;
+    &lt;/div&gt;
+  \`);
+
+    instance.show();
+}</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task7/screenshots/task7_1.png" alt="Скріншот завдання 1" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Масив об'єктів images містить дані про зображення. Функція createGalleryMarkup генерує HTML-розмітку галереї. Делегування подій на елементі ul.gallery дозволяє обробляти кліки по всіх зображеннях одним слухачем. Бібліотека basicLightbox використовується для створення та показу модального вікна з великим зображенням.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task2-feedback' && lab === '8') {
+    html = `
+      <div>
+        <h4>Завдання 2. Форма зворотного зв'язку</h4>
+        <p><strong>Опис:</strong> Реалізовано форму зворотного зв'язку, яка зберігає введені дані в LocalStorage. При перезавантаженні сторінки дані відновлюються з сховища. Це запобігає втраті даних користувача при випадковому оновленні сторінки.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task7/app/2-form.html" target="_blank">assets/task7/app/2-form.html</a></p>
+
+        <h5>HTML (2-form.html)</h5>
+        <pre><code>&lt;form class="feedback-form" autocomplete="off"&gt;
+    &lt;label&gt;
+        Email
+        &lt;input type="email" name="email" autofocus /&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+        Message
+        &lt;textarea name="message" rows="8"&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+        <h5>JavaScript (2-form.js)</h5>
+        <pre><code>const STORAGE_KEY = 'feedback-form-state';
+let formData = { email: '', message: '' };
+
+const form = document.querySelector('.feedback-form');
+const emailInput = form.querySelector('input[name="email"]');
+const messageTextarea = form.querySelector('textarea[name="message"]');
+
+function loadFormData() {
+    const savedData = localStorage.getItem(STORAGE_KEY);
+    if (savedData) {
+        try {
+            formData = JSON.parse(savedData);
+            emailInput.value = formData.email || '';
+            messageTextarea.value = formData.message || '';
+        } catch (error) {
+            console.error('Error parsing data:', error);
+        }
+    }
+}
+
+form.addEventListener('input', (event) => {
+    formData[event.target.name] = event.target.value.trim();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+});
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!formData.email || !formData.message) {
+        alert('Fill please all fields');
+        return;
+    }
+    console.log('Дані форми:', formData);
+    localStorage.removeItem(STORAGE_KEY);
+    form.reset();
+    formData = { email: '', message: '' };
+});
+
+loadFormData();</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task7/screenshots/task7_2.png" alt="Скріншот завдання 2" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Подія input використовується для відстеження змін у полях форми та збереження їх у LocalStorage (з використанням JSON.stringify). При завантаженні сторінки функція loadFormData перевіряє наявність збережених даних та заповнює поля форми. При відправці форми (submit) дані виводяться в консоль, сховище очищується, а форма скидається.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task3-timer' && lab === '8') {
+    html = `
+      <div>
+        <h4>Завдання 3. Таймер зворотного відліку</h4>
+        <p><strong>Опис:</strong> Створено таймер зворотного відліку з використанням бібліотеки flatpickr для вибору дати та часу. Використовується iziToast для сповіщень. Таймер оновлює інтерфейс щосекунди, показуючи дні, години, хвилини та секунди до обраної дати.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task7/app/1-timer.html" target="_blank">assets/task7/app/1-timer.html</a></p>
+
+        <h5>HTML (1-timer.html)</h5>
+        <pre><code>&lt;div class="controls"&gt;
+    &lt;input type="text" id="datetime-picker" placeholder="Виберіть дату і час" /&gt;
+    &lt;button type="button" data-start disabled&gt;Start&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="timer"&gt;
+    &lt;div class="field"&gt;
+        &lt;span class="value" data-days&gt;00&lt;/span&gt;
+        &lt;span class="label"&gt;Days&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</code></pre>
+
+        <h5>JavaScript (1-timer.js)</h5>
+        <pre><code>const dateTimePicker = document.querySelector('#datetime-picker');
+const startButton = document.querySelector('[data-start]');
+// ... elements selection
+
+let userSelectedDate = null;
+let timerId = null;
+
+const options = {
+    enableTime: true,
+    time_24hr: true,
+    defaultDate: new Date(),
+    minuteIncrement: 1,
+    onClose(selectedDates) {
+        const selectedDate = selectedDates[0];
+        if (selectedDate <= new Date()) {
+            iziToast.error({ title: 'Помилка', message: 'Please choose a date in the future', position: 'topRight' });
+            startButton.disabled = true;
+        } else {
+            userSelectedDate = selectedDate;
+            startButton.disabled = false;
+        }
+    },
+};
+
+flatpickr(dateTimePicker, options);
+
+function convertMs(ms) {
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const days = Math.floor(ms / day);
+    const hours = Math.floor((ms % day) / hour);
+    const minutes = Math.floor(((ms % day) % hour) / minute);
+    const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+    return { days, hours, minutes, seconds };
+}
+
+function addLeadingZero(value) {
+    return String(value).padStart(2, '0');
+}
+
+function startTimer() {
+    startButton.disabled = true;
+    dateTimePicker.disabled = true;
+
+    timerId = setInterval(() => {
+        const currentTime = new Date();
+        const timeRemaining = userSelectedDate - currentTime;
+
+        if (timeRemaining <= 0) {
+            clearInterval(timerId);
+            updateTimerDisplay({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            dateTimePicker.disabled = false;
+            iziToast.success({ title: 'Завершено', message: 'Таймер завершив зворотний відлік!' });
+            return;
+        }
+
+        updateTimerDisplay(convertMs(timeRemaining));
+    }, 1000);
+}
+
+startButton.addEventListener('click', startTimer);</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task7/screenshots/task7_3.png" alt="Скріншот завдання 3" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Бібліотека flatpickr налаштована для вибору дати та часу. Валідація дати відбувається в методі onClose. Таймер реалізовано через setInterval, який щосекунди обчислює різницю між поточною та обраною датою. Функція convertMs переводить мілісекунди в дні/години/хвилини/секунди, а addLeadingZero форматує числа.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task4-promise' && lab === '8') {
+    html = `
+      <div>
+        <h4>Завдання 4. Генератор промісів</h4>
+        <p><strong>Опис:</strong> Створено генератор промісів, який дозволяє створювати проміси з заданою затримкою та станом (fulfilled/rejected). Результат обробляється та виводиться через iziToast. Демонстрація роботи з Promise API.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task7/app/2-snackbar.html" target="_blank">assets/task7/app/2-snackbar.html</a></p>
+
+        <h5>HTML (2-snackbar.html)</h5>
+        <pre><code>&lt;form class="form"&gt;
+    &lt;label&gt;Delay (ms) &lt;input type="number" name="delay" required /&gt;&lt;/label&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;State&lt;/legend&gt;
+        &lt;label&gt;&lt;input type="radio" name="state" value="fulfilled" required /&gt; Fulfilled&lt;/label&gt;
+        &lt;label&gt;&lt;input type="radio" name="state" value="rejected" required /&gt; Rejected&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;button type="submit"&gt;Create notification&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+        <h5>JavaScript (2-snackbar.js)</h5>
+        <pre><code>const form = document.querySelector('.form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const delay = Number(formData.get('delay'));
+    const state = formData.get('state');
+
+    createPromise(delay, state)
+        .then((delay) => {
+            iziToast.success({ title: 'Success', message: \`✅ Fulfilled promise in \${delay}ms\`, position: 'topRight' });
+        })
+        .catch((delay) => {
+            iziToast.error({ title: 'Error', message: \`❌ Rejected promise in \${delay}ms\`, position: 'topRight' });
+        });
+    
+    event.target.reset();
+});
+
+function createPromise(delay, state) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (state === 'fulfilled') resolve(delay);
+            else reject(delay);
+        }, delay);
+    });
+}</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task7/screenshots/task7_4.png" alt="Скріншот завдання 4" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Функція createPromise повертає новий Promise, який виконується (resolve) або відхиляється (reject) через заданий час (setTimeout). Обробка результату відбувається через методи .then() та .catch().</p>
+      </div>
+    `;
+  }
+
+  if (key === 'task5-imagesearch' && lab === '8') {
+    html = `
+      <div>
+        <h4>Завдання 5. Пошук зображень</h4>
+        <p><strong>Опис:</strong> Реалізовано пошук зображень через Pixabay API. Використовується SimpleLightbox для перегляду зображень та iziToast для сповіщень. Асинхронні запити виконуються за допомогою fetch.</p>
+        
+        <h5>Посилання на застосунок:</h5>
+        <p><a href="assets/task7/app/pixabay.html" target="_blank">assets/task7/app/pixabay.html</a></p>
+
+        <h5>HTML (pixabay.html)</h5>
+        <pre><code>&lt;form class="search-form" id="search-form"&gt;
+    &lt;input type="text" name="searchQuery" placeholder="Пошук зображень..." /&gt;
+    &lt;button type="submit"&gt;Пошук&lt;/button&gt;
+&lt;/form&gt;
+&lt;ul class="gallery"&gt;&lt;/ul&gt;</code></pre>
+
+        <h5>JavaScript (pixabay.js)</h5>
+        <pre><code>const API_KEY = '53392650-cb5a126039c0f747b2d5505c6';
+const BASE_URL = 'https://pixabay.com/api/';
+const searchForm = document.getElementById('search-form');
+const gallery = document.querySelector('.gallery');
+let lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
+
+searchForm.addEventListener('submit', onSearch);
+
+function onSearch(event) {
+    event.preventDefault();
+    const searchQuery = event.target.elements.searchQuery.value.trim();
+    if (searchQuery === '') return;
+
+    gallery.innerHTML = '';
+    fetchImages(searchQuery)
+        .then((data) => {
+            if (data.hits.length === 0) {
+                iziToast.error({ title: 'Помилка', message: 'No images found!' });
+                return;
+            }
+            renderGallery(data.hits);
+            lightbox.refresh();
+        })
+        .catch((error) => console.error(error));
+}
+
+function fetchImages(query) {
+    const params = new URLSearchParams({
+        key: API_KEY,
+        q: query,
+        image_type: 'photo',
+        orientation: 'horizontal',
+        safesearch: 'true',
+    });
+    return fetch(\`\${BASE_URL}?\${params}\`).then(res => res.json());
+}
+
+function renderGallery(images) {
+    const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => \`
+        &lt;li class="gallery-item"&gt;
+            &lt;a class="gallery-link" href="\${largeImageURL}"&gt;
+                &lt;img class="gallery-image" src="\${webformatURL}" alt="\${tags}" /&gt;
+                &lt;div class="gallery-info"&gt;
+                    &lt;span&gt;Likes: \${likes}&lt;/span&gt;
+                    &lt;span&gt;Views: \${views}&lt;/span&gt;
+                    &lt;span&gt;Comments: \${comments}&lt;/span&gt;
+                    &lt;span&gt;Downloads: \${downloads}&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    \`).join('');
+    gallery.innerHTML = markup;
+}</code></pre>
+
+        <h5>Скріншоти результатів виконання:</h5>
+        <div>
+          <figure>
+            <img src="assets/task7/screenshots/task7_5.png" alt="Скріншот завдання 5" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          </figure>
+        </div>
+
+        <h5>Пояснення:</h5>
+        <p>Функція fetchImages виконує HTTP-запит до Pixabay API з параметрами пошуку. URLSearchParams допомагає зручно формувати рядок запиту. Отримані дані рендеряться в HTML за допомогою шаблонних рядків. SimpleLightbox ініціалізується один раз і оновлюється методом refresh() після додавання нових зображень.</p>
+      </div>
+    `;
+  }
+
+  if (key === 'conclusion' && lab === '8') {
+    html = `
+      <div>
+        <h4>Висновки</h4>
+        <p>У ході виконання лабораторної роботи було поглиблено знання з асинхронного програмування в JavaScript (Promises, async/await). Набуто навичок роботи з зовнішніми бібліотеками (flatpickr, iziToast, SimpleLightbox, basicLightbox) та API (Pixabay). Також відпрацьовано роботу з LocalStorage для збереження стану застосунку.</p>
+        <p>Особливу увагу приділено модульності коду та використанню бандлерів (на прикладі теоретичного вивчення, хоча в рамках даного звіту код представлений у вигляді окремих файлів для наочності). Розглянуто формат JSON для обміну даними та методи його парсингу/стрінгіфікації.</p>
+        <p>Практичне застосування цих технологій дозволило створити більш складні та функціональні веб-застосунки, що взаємодіють з користувачем та зовнішніми сервісами.</p>
+      </div>
+    `;
   }
 
   return html;

@@ -15,19 +15,6 @@
         <p>Введіть текст для виведення в консоль:</p>
         <input type="text" id="task1Input" placeholder="Введіть текст...">
         <button id="task1Button">SHOW ME</button>
-
-        <h3>Код завдання 1:</h3>
-        <pre><code>// HTML
-&lt;input type="text" id="task1Input" placeholder="Введіть текст..."&gt;
-&lt;button id="task1Button"&gt;SHOW ME&lt;/button&gt;
-
-// JavaScript
-const task1Button = document.getElementById('task1Button');
-const task1Input = document.getElementById('task1Input');
-
-task1Button.addEventListener('click', () => {
-    console.log(task1Input.value);
-});</code></pre>
     </section>
 
     <hr>
@@ -38,30 +25,6 @@ task1Button.addEventListener('click', () => {
         <p>Введіть текст для приховування:</p>
         <input type="text" id="task3Input" placeholder="Введіть текст...">
         <button id="task3Button">Приховати</button>
-
-        <h3>Код завдання 3:</h3>
-        <pre><code>// HTML
-&lt;input type="text" id="task3Input" placeholder="Введіть текст..."&gt;
-&lt;button id="task3Button"&gt;Приховати&lt;/button&gt;
-
-// JavaScript
-const task3Button = document.getElementById('task3Button');
-const task3Input = document.getElementById('task3Input');
-let isHidden = false;
-let originalValue = '';
-
-task3Button.addEventListener('click', () => {
-    if (!isHidden) {
-        originalValue = task3Input.value;
-        task3Input.value = '*'.repeat(originalValue.length);
-        task3Button.textContent = 'Розкрити';
-        isHidden = true;
-    } else {
-        task3Input.value = originalValue;
-        task3Button.textContent = 'Приховати';
-        isHidden = false;
-    }
-});</code></pre>
     </section>
 
     <hr>
@@ -71,25 +34,6 @@ task3Button.addEventListener('click', () => {
         <h2 class="taskTitle">Завдання 5: Клік у зеленому прямокутнику</h2>
         <p>Клікніть у зеленому прямокутнику або поза ним:</p>
         <div id="place"></div>
-
-        <h3>Код завдання 5:</h3>
-        <pre><code>// HTML
-&lt;h2 class="taskTitle"&gt;Завдання 5: Клік у зеленому прямокутнику&lt;/h2&gt;
-&lt;div id="place"&gt;&lt;/div&gt;
-
-// CSS
-#place {
-    width: 200px;
-    height: 100px;
-    background-color: green;
-}
-
-// JavaScript
-window.addEventListener('click', (event) => {
-    const place = document.getElementById('place');
-    const isInsidePlace = place.contains(event.target);
-    console.log(isInsidePlace);
-});</code></pre>
     </section>
 
     <hr>
@@ -126,18 +70,6 @@ window.addEventListener('click', (event) => {
                 </ul>
             </li>
         </ul>
-
-        <h3>Код завдання 7:</h3>
-        <pre><code>// JavaScript
-const categories = document.querySelectorAll('#categories .item');
-console.log('Number of categories:', categories.length);
-
-categories.forEach(category => {
-    const title = category.querySelector('h2').textContent;
-    const itemsCount = category.querySelectorAll('li').length;
-    console.log('Category:', title);
-    console.log('Elements:', itemsCount);
-});</code></pre>
     </section>
 
     <hr>
@@ -156,45 +88,6 @@ categories.forEach(category => {
             </label>
             <button type="submit">Log in</button>
         </form>
-
-        <h3>Код завдання 8:</h3>
-        <pre><code>// HTML
-&lt;form class="login-form"&gt;
-    &lt;label&gt;
-        Email
-        &lt;input type="email" name="email" /&gt;
-    &lt;/label&gt;
-    &lt;label&gt;
-        Password
-        &lt;input type="password" name="password" /&gt;
-    &lt;/label&gt;
-    &lt;button type="submit"&gt;Log in&lt;/button&gt;
-&lt;/form&gt;
-
-// JavaScript
-const loginForm = document.querySelector('.login-form');
-
-loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    
-    const { email, password } = event.target.elements;
-    
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    
-    if (!emailValue || !passwordValue) {
-        alert('All form fields must be filled in');
-        return;
-    }
-    
-    const formData = {
-        email: emailValue,
-        password: passwordValue
-    };
-    
-    console.log(formData);
-    event.target.reset();
-});</code></pre>
     </section>
 
     <hr>
@@ -206,29 +99,6 @@ loginForm.addEventListener('submit', (event) => {
             <p>Background color: <span class="color">-</span></p>
             <button type="button" class="change-color">Change color</button>
         </div>
-
-        <h3>Код завдання 9:</h3>
-        <pre><code>// HTML
-&lt;div class="widget"&gt;
-    &lt;p&gt;Background color: &lt;span class="color"&gt;-&lt;/span&gt;&lt;/p&gt;
-    &lt;button type="button" class="change-color"&gt;Change color&lt;/button&gt;
-&lt;/div&gt;
-
-// JavaScript
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-        .toString(16)
-        .padStart(6, 0)}`;
-}
-
-const changeColorBtn = document.querySelector('.change-color');
-const colorSpan = document.querySelector('.color');
-
-changeColorBtn.addEventListener('click', () => {
-    const color = getRandomHexColor();
-    document.body.style.backgroundColor = color;
-    colorSpan.textContent = color;
-});</code></pre>
     </section>
 
     <hr>
@@ -242,62 +112,6 @@ changeColorBtn.addEventListener('click', () => {
             <button type="button" data-destroy>Destroy</button>
         </div>
         <div id="boxes"></div>
-
-        <h3>Код завдання 10:</h3>
-        <pre><code>// HTML
-&lt;div id="controls"&gt;
-    &lt;input type="number" min="1" max="100" step="1" /&gt;
-    &lt;button type="button" data-create&gt;Create&lt;/button&gt;
-    &lt;button type="button" data-destroy&gt;Destroy&lt;/button&gt;
-&lt;/div&gt;
-&lt;div id="boxes"&gt;&lt;/div&gt;
-
-// JavaScript
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-        .toString(16)
-        .padStart(6, 0)}`;
-}
-
-const controls = document.querySelector('#controls');
-const input = controls.querySelector('input');
-const createBtn = controls.querySelector('[data-create]');
-const destroyBtn = controls.querySelector('[data-destroy]');
-const boxesContainer = document.querySelector('#boxes');
-
-function createBoxes(amount) {
-    const boxes = [];
-    let size = 30;
-    
-    for (let i = 0; i &lt; amount; i++) {
-        const box = document.createElement('div');
-        box.style.width = `${size}px`;
-        box.style.height = `${size}px`;
-        box.style.backgroundColor = getRandomHexColor();
-        boxes.push(box);
-        size += 10;
-    }
-    
-    boxesContainer.append(...boxes);
-}
-
-function destroyBoxes() {
-    boxesContainer.innerHTML = '';
-}
-
-createBtn.addEventListener('click', () => {
-    const amount = Number(input.value);
-    
-    if (amount &lt; 1 || amount &gt; 100) {
-        return;
-    }
-    
-    destroyBoxes();
-    createBoxes(amount);
-    input.value = '';
-});
-
-destroyBtn.addEventListener('click', destroyBoxes);</code></pre>
     </section>
 
     <script src="script.js"></script>
